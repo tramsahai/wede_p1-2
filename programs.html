@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs - Shakti Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* This is the style for the popup box that shows program info */
+        .info-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            z-index: 1000;
+            width: 400px;
+            max-width: 90%;
+            text-align: left;
+            line-height: 1.6;
+            color: #000000; /* Black text color so you can read it */
+        }
+        
+        /* This styles the info button under each image */
+        .info-text {
+            cursor: pointer;
+            color: #E5B74D;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+            padding: 8px 15px;
+            border: 2px solid #E5B74D;
+            border-radius: 5px;
+            background: #000;
+        }
+        
+        /* Makes the button change color when you hover over it */
+        .info-text:hover {
+            background: #E5B74D;
+            color: black;
+        }
+        
+        /* Styles for the close button */
+        .close-btn {
+            background: #B22222;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        /* The dark overlay behind the popup */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
+        
+        /* Styles for the popup heading */
+        .info-popup h3 {
+            color: #B22222;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #E5B74D;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the top part of the website with the menu -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Shakti Foundation</h1>
+            </div>
+            
+            <!-- This is the navigation menu -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html" class="active">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Donate button that stands out -->
+            <a href="donate.html" class="donate-button">Donate Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- The big heading section at the top -->
+        <section class="programs-hero">
+            <div class="container">
+                <h2>Empowerment Programs</h2>
+                <p>Comprehensive initiatives designed to create lasting impact in communities we serve</p>
+            </div>
+        </section>
+
+        <!-- Microfinance program section -->
+        <section class="program-detail">
+            <div class="container">
+                <div class="program-content">
+                    <div class="program-text">
+                        <h3>Microfinance</h3>
+                        <p>Our microfinance program provides small loans and financial literacy training to help individuals start and grow sustainable businesses. We focus on empowering women entrepreneurs who often lack access to traditional banking services.</p>
+                        <div class="program-stats">
+                            <div class="stat">
+                                <span class="number">2,500+</span>
+                                <span class="label">Loans Disbursed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">95%</span>
+                                <span class="label">Repayment Rate</span>
+                            </div>
+                        </div>
+                        <a href="enquiry.html" class="help-button">Get Help with Microfinance</a>
+                    </div>
+                    <div class="program-image">
+                        <img src="images/microfinance-program.jpg" alt="Women entrepreneurs receiving microfinance training">
+                        <!-- Info button that shows popup when clicked -->
+                        <div class="info-text" onclick="showInfo('microfinance-info')">ℹ️ Program Info</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healthcare program section -->
+        <section class="program-detail healthcare">
+            <div class="container">
+                <div class="program-content">
+                    <div class="program-image">
+                        <img src="images/healthcare-program.jpg" alt="Mobile health clinic serving rural community">
+                        <!-- Info button for healthcare program -->
+                        <div class="info-text" onclick="showInfo('healthcare-info')">ℹ️ Program Info</div>
+                    </div>
+                    <div class="program-text">
+                        <h3>Healthcare</h3>
+                        <p>Mobile health clinics and community health workers bring essential medical services to remote areas. Our programs focus on preventive care, maternal health, and treatment of common diseases.</p>
+                        <div class="program-stats">
+                            <div class="stat">
+                                <span class="number">15,000+</span>
+                                <span class="label">Patients Served</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">40%</span>
+                                <span class="label">Reduction in Child Mortality</span>
+                            </div>
+                        </div>
+                        <a href="enquiry.html" class="help-button">Get Healthcare Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education program section -->
+        <section class="program-detail">
+            <div class="container">
+                <div class="program-content">
+                    <div class="program-text">
+                        <h3>Education</h3>
+                        <p>Scholarship programs, school infrastructure development, and teacher training initiatives ensure quality education reaches every child. We also provide adult literacy programs for parents and community members.</p>
+                        <div class="program-stats">
+                            <div class="stat">
+                                <span class="number">1,200+</span>
+                                <span class="label">Students Supported</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">85%</span>
+                                <span class="label">Graduation Rate</span>
+                            </div>
+                        </div>
+                        <a href="enquiry.html" class="help-button">Apply for Education Support</a>
+                    </div>
+                    <div class="program-image">
+                        <img src="images/education-program.jpg" alt="Children in classroom receiving education">
+                        <!-- Info button for education program -->
+                        <div class="info-text" onclick="showInfo('education-info')">ℹ️ Program Info</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training program section -->
+        <section class="program-detail training">
+            <div class="container">
+                <div class="program-content">
+                    <div class="program-image">
+                        <img src="images/training-program.jpg" alt="Women learning tailoring skills">
+                        <!-- Info button for training program -->
+                        <div class="info-text" onclick="showInfo('training-info')">ℹ️ Program Info</div>
+                    </div>
+                    <div class="program-text">
+                        <h3>Training Initiatives</h3>
+                        <p>Vocational training programs in tailoring, computer skills, agriculture, and handicrafts provide individuals with marketable skills. Our training centers are equipped with modern tools and experienced instructors.</p>
+                        <div class="program-stats">
+                            <div class="stat">
+                                <span class="number">800+</span>
+                                <span class="label">Trainees Certified</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">70%</span>
+                                <span class="label">Job Placement Rate</span>
+                            </div>
+                        </div>
+                        <a href="enquiry.html" class="help-button">Join Training Program</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dark overlay that appears behind popups -->
+    <div class="overlay" id="overlay" onclick="hideAllInfo()"></div>
+
+    <!-- Microfinance info popup - shows when you click the info button -->
+    <div id="microfinance-info" class="info-popup">
+        <h3>Microfinance Program Details</h3>
+        <p>Our microfinance initiative provides small business loans ranging from $50 to $500 to women entrepreneurs in rural Bangladesh. The program includes comprehensive financial literacy training, business planning workshops, and ongoing mentorship. With a 95% repayment rate, this program has successfully helped over 2,500 women start sustainable businesses, enabling them to support their families and contribute to their local economies. Loans are offered at low interest rates with flexible repayment terms of 6-12 months.</p>
+        <button class="close-btn" onclick="hideInfo('microfinance-info')">Close Info</button>
+    </div>
+
+    <!-- Healthcare info popup -->
+    <div id="healthcare-info" class="info-popup">
+        <h3>Healthcare Program Details</h3>
+        <p>Our mobile healthcare program brings essential medical services directly to remote villages through fully-equipped mobile clinics staffed by qualified doctors and nurses. The program focuses on maternal and child health, providing prenatal care, vaccinations, nutrition support, and treatment for common diseases. Serving over 15,000 patients annually, we've achieved a 40% reduction in child mortality in the communities we serve. The clinics operate weekly rotations across 57 districts, ensuring even the most isolated communities receive quality healthcare.</p>
+        <button class="close-btn" onclick="hideInfo('healthcare-info')">Close Info</button>
+    </div>
+
+    <!-- Education info popup -->
+    <div id="education-info" class="info-popup">
+        <h3>Education Program Details</h3>
+        <p>Our comprehensive education initiative provides scholarships covering full tuition, books, and uniforms for 1,200+ underprivileged children annually. The program also includes school infrastructure development, teacher training workshops, and adult literacy classes for parents. With an 85% graduation rate, we're breaking the cycle of poverty through education. We've built and renovated 15 schools, trained 200+ teachers, and established evening literacy programs that have helped over 800 adults learn to read and write, creating a supportive educational environment for entire communities.</p>
+        <button class="close-btn" onclick="hideInfo('education-info')">Close Info</button>
+    </div>
+
+    <!-- Training info popup -->
+    <div id="training-info" class="info-popup">
+        <h3>Training Program Details</h3>
+        <p>Our vocational training programs offer 3-month certified courses in tailoring, computer skills, agriculture, and traditional handicrafts. The training centers are equipped with modern tools and led by experienced instructors who provide hands-on learning. With over 800 trainees certified and a 70% job placement rate, we're creating skilled professionals who can earn sustainable incomes. The program includes job placement assistance, business startup support for graduates who want to become entrepreneurs, and ongoing mentorship to ensure long-term success in their chosen fields.</p>
+        <button class="close-btn" onclick="hideInfo('training-info')">Close Info</button>
+    </div>
+
+    <!-- Footer at the bottom of the page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
+                <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This function shows the info popup when you click the info button
+        function showInfo(infoId) {
+            // Show the dark overlay behind the popup
+            document.getElementById('overlay').style.display = 'block';
+            // Show the specific popup you clicked on
+            document.getElementById(infoId).style.display = 'block';
+        }
+        
+        // This function hides the popup when you click the close button
+        function hideInfo(infoId) {
+            // Hide the dark overlay
+            document.getElementById('overlay').style.display = 'none';
+            // Hide the popup
+            document.getElementById(infoId).style.display = 'none';
+        }
+        
+        // This function hides all popups if you click outside of them
+        function hideAllInfo() {
+            // Find all popups on the page
+            var popups = document.querySelectorAll('.info-popup');
+            // Hide each popup
+            popups.forEach(function(popup) {
+                popup.style.display = 'none';
+            });
+            // Hide the dark overlay
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
