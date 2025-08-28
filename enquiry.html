@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries - Shakti Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section - Consistent navigation across all our pages -->
+    <header>
+        <div class="header-container">
+            <!-- Logo area - Our organization's visual identity -->
+            <div class="logo">
+                <h1>Shakti Foundation</h1>
+            </div>
+            
+            <!-- Main navigation menu - Helps visitors find their way around our site -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- Current page is highlighted to show where the user is -->
+                    <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Donate button - Always visible to encourage support for our mission -->
+            <a href="donate.html" class="donate-button">Donate Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Enquiry Hero Section - Introduction to the enquiry process -->
+        <section class="enquiry-hero">
+            <div class="container">
+                <h2>Get Involved with Shakti Foundation</h2>
+                <!-- Encouraging message to invite engagement -->
+                <p>Interested in partnership, volunteering, or have specific questions? We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <!-- Enquiry Form Section - Main content area for submitting inquiries -->
+        <section class="enquiry-form-section">
+            <div class="container">
+                <h2>Send us an Enquiry</h2>
+                <p class="section-subtitle">Tell us how you'd like to be involved or what information you need</p>
+                
+                <!-- The actual enquiry form where visitors can reach out to us -->
+                <div class="enquiry-form">
+                    <form action="#" method="POST">
+                        <!-- Personal Information section - Collects basic contact details -->
+                        <div class="form-group">
+                            <label>Your Information</label>
+                            <!-- Name and email in one row for efficient space usage -->
+                            <div class="form-row">
+                                <input type="text" name="full-name" placeholder="Full Name" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <!-- Phone and organization in a second row -->
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Phone Number">
+                                <input type="text" name="organization" placeholder="Organization (if applicable)">
+                            </div>
+                        </div>
+                        
+                        <!-- Enquiry Type selection - Helps us categorize and route inquiries properly -->
+                        <div class="form-group">
+                            <label>Type of Enquiry</label>
+                            <!-- Button options for common enquiry types -->
+                            <div class="enquiry-type-buttons">
+                                <button type="button" class="enquiry-type-btn">Partnership</button>
+                                <button type="button" class="enquiry-type-btn">Volunteering</button>
+                                <button type="button" class="enquiry-type-btn">Program Information</button>
+                                <button type="button" class="enquiry-type-btn">Other</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Program Selection - Only relevant for program-related inquiries -->
+                        <div class="form-group" id="programSelection">
+                            <label>Which program are you interested in?</label>
+                            <!-- Dropdown menu of our various programs -->
+                            <select name="program-interest">
+                                <option value="">Select a program</option>
+                                <option value="microfinance">Microfinance</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="education">Education</option>
+                                <option value="training">Skills Training</option>
+                                <option value="all">All Programs</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message area - Where visitors can provide details about their inquiry -->
+                        <div class="form-group">
+                            <label>Your Message</label>
+                            <!-- Larger text area for detailed messages and questions -->
+                            <textarea name="message" placeholder="Please tell us more about your enquiry, questions, or how you'd like to get involved..." rows="6" required></textarea>
+                        </div>
+                        
+                        <!-- Preferred Contact Method - How the visitor would like us to respond -->
+                        <div class="form-group">
+                            <label>Preferred Contact Method</label>
+                            <div class="contact-methods">
+                                <!-- Email option - most common and preferred method -->
+                                <label class="contact-option">
+                                    <input type="radio" name="contact-method" value="email" checked>
+                                    Email
+                                </label>
+                                <!-- Phone call option - for more personal conversations -->
+                                <label class="contact-option">
+                                    <input type="radio" name="contact-method" value="phone">
+                                    Phone Call
+                                </label>
+                                <!-- WhatsApp option - popular for international communications -->
+                                <label class="contact-option">
+                                    <input type="radio" name="contact-method" value="whatsapp">
+                                    WhatsApp
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit button - Sends the enquiry to our team for response -->
+                        <button type="submit" class="btn-primary">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Information Section - Other ways people can engage with us -->
+        <section class="enquiry-info">
+            <div class="container">
+                <h2>Other Ways to Get Involved</h2>
+                
+                <!-- Cards showing different engagement opportunities -->
+                <div class="involvement-options">
+                    <!-- Corporate partnerships option -->
+                    <div class="option-card">
+                        <h3>Corporate Partnerships</h3>
+                        <p>We work with businesses to create meaningful CSR initiatives and sustainable partnerships that create real impact.</p>
+                        <!-- Link to learn more about corporate partnerships -->
+                        <a href="contact.html" class="btn-secondary">Learn More</a>
+                    </div>
+                    
+                    <!-- Volunteer opportunities option -->
+                    <div class="option-card">
+                        <h3>Volunteer Opportunities</h3>
+                        <p>Join our team of dedicated volunteers in various capacities - from field work to administrative support.</p>
+                        <!-- Link to view available volunteer positions -->
+                        <a href="programs.html" class="btn-secondary">View Opportunities</a>
+                    </div>
+                    
+                    <!-- Program visits option -->
+                    <div class="option-card">
+                        <h3>Program Visits</h3>
+                        <p>Interested in seeing our work firsthand? We organize site visits for potential partners and supporters.</p>
+                        <!-- Link to schedule a visit to our programs -->
+                        <a href="contact.html" class="btn-secondary">Schedule a Visit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Info - For those who prefer direct contact methods -->
+        <section class="quick-contact">
+            <div class="container">
+                <h2>Prefer to reach out directly?</h2>
+                <div class="contact-details">
+                    <!-- Specific email for partnership inquiries -->
+                    <p><strong>Email:</strong> partnerships@shakti.org.bd</p>
+                    <!-- Direct phone line to our partnerships team -->
+                    <p><strong>Phone:</strong> +91 98765 43210 (Partnerships Department)</p>
+                    <!-- Our office hours so people know when to expect responses -->
+                    <p><strong>Hours:</strong> Monday-Friday, 9AM-5PM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section - Consistent across all pages with essential information -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Copyright information - Protects our organization's content -->
+                <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
+                <!-- General contact information for various inquiries -->
+                <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript file - Handles form interactions and dynamic elements -->
+    <script src="js/enquiry.js"></script>
+</body>
+</html>

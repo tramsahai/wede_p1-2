@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shakti Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section - Consistent across all pages for easy navigation -->
+    <header>
+        <div class="header-container">
+            <!-- Logo section with image and text - our visual identity -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Shakti Foundation Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1 class="logo-main">SHAKTI</h1>
+                    <p class="logo-slogan">Empowering Women</p>
+                </div>
+            </div>
+            
+            <!-- Main Navigation Menu - Helps users find their way around our site -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <!-- Current page is highlighted with active class -->
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Donate Button - Always visible to encourage support -->
+            <a href="donate.html" class="donate-button">Donate Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Us Section - Primary way for visitors to reach out to us -->
+        <section class="contact-section">
+            <div class="container">
+                <!-- Section Heading - Clear title for this part of the page -->
+                <h2>Contact Us</h2>
+                <p class="section-subtitle">Get in touch to learn more about our work or get involved</p>
+                
+                <div class="contact-content">
+                    <!-- Contact Form - Where visitors can send us messages directly -->
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <!-- Name and Email fields side by side for efficient use of space -->
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            
+                            <!-- Subject field - helps us categorize and prioritize messages -->
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            
+                            <!-- Message area - where visitors can share details about their inquiry -->
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            
+                            <!-- Submit Button - sends the form data to our team -->
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information - Alternative ways to reach us -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>📧 info@shaktifoundation.org</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>📱 +91 98765 43210</p>
+                        
+                        <h3>Our Location</h3>
+                        <!-- Interactive Google Map - Shows visitors exactly where we're located -->
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977741619!2d90.349285767855!3d23.780887714264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1690832612345!5m2!1sen!2sus" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <p>📍 123 Empowerment Street, Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Make a Donation Section - For visitors who want to support our work financially -->
+        <section class="donation-section">
+            <div class="container">
+                <h2>Make a Donation</h2>
+                <p class="section-subtitle">Your contribution helps us continue our mission of empowering communities</p>
+                
+                <div class="donation-form">
+                    <form action="#" method="POST">
+                        <!-- Donation Amount Selection - Pre-set options for convenience -->
+                        <div class="form-group">
+                            <label>Donation Amount</label>
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn">¥500</button>
+                                <button type="button" class="amount-btn">¥1,000</button>
+                                <button type="button" class="amount-btn">¥2,500</button>
+                            </div>
+                            <!-- Custom amount field for those who want to give a specific amount -->
+                            <input type="number" name="custom-amount" placeholder="Custom Amount">
+                        </div>
+                        
+                        <!-- Donation Frequency - Options for one-time or recurring donations -->
+                        <div class="form-group">
+                            <label>Donation Frequency</label>
+                            <div class="frequency-buttons">
+                                <button type="button" class="frequency-btn">One-time</button>
+                                <button type="button" class="frequency-btn">Monthly</button>
+                                <button type="button" class="frequency-btn">Quarterly</button>
+                                <button type="button" class="frequency-btn">Annually</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Donor Information - Collecting basic details about our supporters -->
+                        <div class="form-group">
+                            <label>Your Information</label>
+                            <div class="form-row">
+                                <input type="text" name="full-name" placeholder="Full Name" required>
+                                <input type="email" name="donor-email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Method Selection - Different ways to make a donation -->
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="card" checked>
+                                    Credit/Debit Card
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="bank">
+                                    Bank Transfer
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="upi">
+                                    UPI
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Details - Only shown when card payment is selected -->
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-row">
+                                <input type="text" name="card-number" placeholder="Card Number">
+                                <input type="text" name="cvv" placeholder="CVV">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="expiry-date" placeholder="MM/YY">
+                                <input type="text" name="card-name" placeholder="Name on Card">
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Donation Button - Final step to complete the donation process -->
+                        <button type="submit" class="btn-primary confirm-donation-btn">Confirm Donation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Info Section - For those who prefer direct contact methods -->
+        <section class="quick-contact">
+            <div class="container">
+                <h2>Prefer to Reach Us Directly?</h2>
+                <div class="contact-details">
+                    <p><strong>📧 General Inquiries:</strong> info@shaktifoundation.org</p>
+                    <p><strong>📞 Partnerships:</strong> +91 98765 43210 (Partnerships Department)</p>
+                    <p><strong>🕘 Office Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+                    <p><strong>📍 Visit Us:</strong> 123 Empowerment Street, Dhaka, Bangladesh</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section - Consistent across all pages with essential information -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Copyright Information - Protecting our organization's intellectual property -->
+                <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
+                
+                <!-- Contact Details in Footer - Easy access to our contact information -->
+                <p>📧 info@shaktifoundation.org | 📞 +91 98765 43210 | 📱 +91 98765 43210</p>
+                
+                <!-- Physical Address - Where visitors can find our office -->
+                <p>📍 123 Empowerment Street, Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactive elements - Enhances user experience -->
+    <script>
+        // Handles donation amount button interactions
+        // Makes it easy for donors to select common donation amounts
+        document.querySelectorAll('.amount-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons to reset the selection
+                document.querySelectorAll('.amount-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button to show it's selected
+                this.classList.add('active');
+                // Update custom amount field with the selected amount
+                document.querySelector('input[name="custom-amount"]').value = this.textContent.replace('¥', '');
+            });
+        });
+
+        // Handles donation frequency button interactions
+        // Allows donors to choose how often they want to contribute
+        document.querySelectorAll('.frequency-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all frequency buttons
+                document.querySelectorAll('.frequency-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to the selected frequency option
+                this.classList.add('active');
+            });
+        });
+
+        // Shows or hides card details based on selected payment method
+        // Only shows card fields when card payment is chosen
+        document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const cardDetails = document.getElementById('cardDetails');
+                if (this.value === 'card') {
+                    cardDetails.style.display = 'block';
+                } else {
+                    cardDetails.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

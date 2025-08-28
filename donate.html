@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Support Shakti Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section - Consistent navigation across all pages -->
+    <header>
+        <div class="header-container">
+            <!-- Logo section - Our organization's identity -->
+            <div class="logo">
+                <h1>Shakti Foundation</h1>
+            </div>
+            
+            <!-- Main navigation menu - Helps users move between sections of our site -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Donate button - Highlighted since we're on the donation page -->
+            <a href="donate.html" class="donate-button active">Donate Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for Donation Page - Inspirational introduction to giving -->
+        <section class="donate-hero">
+            <div class="container">
+                <h2>Support Women's Empowerment</h2>
+                <!-- Explanation of how donations make a difference -->
+                <p>Your donation directly funds microfinance, healthcare, education, and skills training programs that transform lives and communities.</p>
+            </div>
+        </section>
+
+        <!-- Main Donation Section - Where the actual donation process happens -->
+        <section class="donation-main">
+            <div class="container">
+                <h2>Make a Donation!</h2>
+                <p class="section-subtitle">Your contribution helps us continue our mission of empowering communities</p>
+                
+                <!-- Donation form - Collects donor information and processes gifts -->
+                <div class="donation-form">
+                    <form action="#" method="POST">
+                        <!-- Donation Amount Selection - Lets donors choose how much to give -->
+                        <div class="form-group">
+                            <label>Donation Amount</label>
+                            <!-- Quick-select buttons for common donation amounts -->
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn">¥500</button>
+                                <button type="button" class="amount-btn">¥1,000</button>
+                                <button type="button" class="amount-btn">¥2,500</button>
+                            </div>
+                            <!-- Custom amount field for those who want to give a specific amount -->
+                            <input type="number" name="custom-amount" placeholder="Custom Amount">
+                        </div>
+                        
+                        <!-- Donation Frequency - Options for one-time or recurring gifts -->
+                        <div class="form-group">
+                            <label>Donation Frequency</label>
+                            <div class="frequency-buttons">
+                                <button type="button" class="frequency-btn">One-time</button>
+                                <button type="button" class="frequency-btn">Monthly</button>
+                                <button type="button" class="frequency-btn">Quarterly</button>
+                                <button type="button" class="frequency-btn">Annually</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Donor Information - Basic details about our supporters -->
+                        <div class="form-group">
+                            <label>Your Information</label>
+                            <!-- Name and email fields side by side for efficient layout -->
+                            <div class="form-row">
+                                <input type="text" name="full-name" placeholder="Full Name" required>
+                                <input type="email" name="donor-email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Method Selection - Different ways to make a donation -->
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div class="payment-methods">
+                                <!-- Credit/Debit Card option - Most common payment method -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="card" checked>
+                                    Credit/Debit Card
+                                </label>
+                                <!-- Bank Transfer option - For those who prefer direct bank payments -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="bank">
+                                    Bank Transfer
+                                </label>
+                                <!-- UPI option - Popular digital payment method in many regions -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="upi">
+                                    UPI
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Details Section - Only shown when card payment is selected -->
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-row">
+                                <input type="text" name="card-number" placeholder="Card Number">
+                                <input type="text" name="cvv" placeholder="CVV">
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="expiry-date" placeholder="MM/YY">
+                                <input type="text" name="card-name" placeholder="Name on Card">
+                            </div>
+                        </div>
+                        
+                        <!-- Final confirmation button - Completes the donation process -->
+                        <button type="submit" class="btn-primary confirm-donation-btn">Confirm Donation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section - Shows donors exactly what their money will accomplish -->
+        <section class="impact-section">
+            <div class="container">
+                <h2>Your Donation Makes Impact</h2>
+                <!-- Visual representation of how different donation amounts help -->
+                <div class="impact-stats">
+                    <!-- Shows what a ¥500 donation can provide -->
+                    <div class="impact-item">
+                        <h3>¥500</h3>
+                        <p>Provides a woman with microfinance training materials</p>
+                    </div>
+                    <!-- Shows what a ¥1,000 donation can provide -->
+                    <div class="impact-item">
+                        <h3>¥1,000</h3>
+                        <p>Funds healthcare supplies for a remote village clinic</p>
+                    </div>
+                    <!-- Shows what a ¥2,500 donation can provide -->
+                    <div class="impact-item">
+                        <h3>¥2,500</h3>
+                        <p>Sponsors a child's education for one full year</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section - Consistent across all pages with essential information -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Copyright information - Protects our organization's content -->
+                <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
+                <!-- Contact information - How people can reach us with questions -->
+                <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript file - Handles interactive elements on the donation page -->
+    <script src="js/donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shakti Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional styles for expandable content sections */
+        /* These make our info text elements interactive and visually appealing */
+        .info-text {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hover effect for info text - changes background and text color */
+        .info-text:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+            transform: scale(1.05);
+        }
+        
+        /* Base styling for expandable content sections - hidden by default */
+        .expandable-content {
+            display: none;
+            padding: 1rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #FFD700;
+        }
+        
+        /* When the 'show' class is added, content becomes visible with a fade animation */
+        .expandable-content.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        /* Special expanded section for the founder's story - more prominent styling */
+        .founder-expandable {
+            display: none;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 12px;
+            margin-top: 2rem;
+            border: 2px solid #FFD700;
+        }
+        
+        /* Show the founder's story with a slide-down animation */
+        .founder-expandable.show {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+        
+        /* Simple fade-in animation for content reveals */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Slide down animation for more prominent content reveals */
+        @keyframes slideDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Styling for the close buttons in our expandable sections */
+        .close-btn {
+            background: #B22222;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        
+        /* Hover effect for close buttons - gold background with black text */
+        .close-btn:hover {
+            background: #FFD700;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with navigation -->
+    <header>
+        <div class="header-container">
+            <!-- Logo section with image and text elements -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Shakti Foundation Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1 class="logo-main">SHAKTI</h1>
+                    <p class="logo-slogan">Empowering Women</p>
+                </div>
+            </div>
+            
+            <!-- Main navigation menu - About Us is currently active -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Donate button - prominent call to action -->
+            <a href="donate.html" class="donate-button">Donate Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section for the About page - introduces the organization -->
+        <section class="about-hero">
+            <div class="container">
+                <h2>About Shakti Foundation</h2>
+                <p>Transforming lives through sustainable empowerment since 1992</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section - details the foundation's history and origins -->
+        <section class="our-story">
+            <div class="container">
+                <h2>Our Story</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p>Shakti Foundation was founded in 1992 in Dhaka, Bangladesh by <strong>Dr. Humaira Islam</strong> and a team of social innovators dedicated to empowering underprivileged women through microfinance.</p>
+                        
+                        <p>What began as a pilot microfinance program for women living in urban slums rapidly expanded into both urban and rural regions, transforming Shakti into one of the largest NGOs in Bangladesh.</p>
+                        
+                        <p>Today, Shakti operates across <strong>57 districts</strong> with over <strong>475,199 members</strong>. While microcredit remains central to our mission, we now offer comprehensive programs including healthcare, education, agro-business, renewable energy, skills training, and advocacy.</p>
+                        
+                        <!-- Interactive element to expand the founder's story -->
+                        <div class="info-text" onclick="toggleFounderStory()">
+                            📖 Read Dr. Humaira Islam's Full Story
+                        </div>
+                        
+                        <!-- Expandable section containing the founder's detailed biography -->
+                        <div class="founder-expandable" id="founderStory">
+                            <h3>Dr. Humaira Islam's Journey</h3>
+                            <p>Dr. Humaira Islam, a visionary social entrepreneur, founded Shakti Foundation in 1992 with a simple yet powerful belief: that every woman deserves the opportunity to become self-reliant and empowered.</p>
+                            
+                            <p><strong>Early Life & Education:</strong> Born and raised in Dhaka, Dr. Islam witnessed firsthand the struggles women faced in accessing financial resources. She pursued degrees in Social Work and Economics, specializing in microfinance and women's economic empowerment.</p>
+                            
+                            <p><strong>The Beginning:</strong> In 1992, with a small team of like-minded individuals, she started a pilot microfinance program in the urban slums of Dhaka. The program provided small loans to women entrepreneurs who were excluded from traditional banking systems.</p>
+                            
+                            <p><strong>Growth & Impact:</strong> Under her leadership, Shakti grew from serving 50 women in 1992 to over 475,000 members today. She pioneered innovative approaches that combined microfinance with education, healthcare, and skills training.</p>
+                            
+                            <p><strong>Recognition:</strong> Dr. Islam has received numerous awards for her work, including the National Social Service Award and recognition from international development organizations.</p>
+                            
+                            <p><strong>Philosophy:</strong> "Empower a woman, and you empower an entire community. When women have access to resources and opportunities, they become catalysts for sustainable change."</p>
+                            
+                            <!-- Button to close the expanded founder story section -->
+                            <button class="close-btn" onclick="toggleFounderStory()">Close Story</button>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <img src="images/founder-story.jpg" alt="Dr. Humaira Islam with community women">
+                        <!-- Alternative way to expand the founder's story by clicking on the image caption -->
+                        <div class="info-text" onclick="toggleFounderStory()">
+                            ℹ️ Click to Learn More About Dr. Islam
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section - outlines the organization's core purpose and future goals -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mv-grid">
+                    <!-- Vision card - what we aspire to achieve long-term -->
+                    <div class="mv-card">
+                        <h3>Our Vision</h3>
+                        <p>To empower disadvantaged women to become leaders, entrepreneurs, and agents of change in their communities, creating a world where gender equality is a reality.</p>
+                    </div>
+                    <!-- Mission card - what we do to achieve our vision -->
+                    <div class="mv-card">
+                        <h3>Our Mission</h3>
+                        <p>To strengthen the social and economic foundations of poor women in Bangladesh through microfinance, education, healthcare, and skills training, while encouraging donations and partnerships to sustain these efforts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team Section - introduces the key people driving the organization -->
+        <section class="leadership-team">
+            <div class="container">
+                <h2>Leadership Team</h2>
+                <p class="section-subtitle">Dedicated professionals driving our mission forward</p>
+                
+                <div class="team-grid">
+                    <!-- Founder's profile - most prominent team member -->
+                    <div class="team-member">
+                        <img src="images/dr-humaira-islam.jpg" alt="Dr. Humaira Islam - Founder and Director">
+                        <h4>Dr. Humaira Islam</h4>
+                        <p class="position">Founder & Director</p>
+                        <p class="bio">Pioneer in microfinance and women's empowerment with 30+ years of experience.</p>
+                        
+                        <!-- Clickable element to expand detailed biography -->
+                        <div class="info-text" onclick="toggleContent('founderBio')">
+                            ℹ️ Learn More About Dr. Islam
+                        </div>
+                        
+                        <!-- Expandable content with detailed professional information -->
+                        <div class="expandable-content" id="founderBio">
+                            <p><strong>Education:</strong> PhD in Social Entrepreneurship, Master's in Economics</p>
+                            <p><strong>Experience:</strong> 30+ years in microfinance and women's empowerment</p>
+                            <p><strong>Awards:</strong> National Social Service Award 2010, Women Leadership Award 2018</p>
+                            <p><strong>Specialization:</strong> Microfinance systems, Community development, Women's economic empowerment</p>
+                            <button class="close-btn" onclick="toggleContent('founderBio')">Close</button>
+                        </div>
+                    </div>
+
+                    <!-- Program Manager's profile -->
+                    <div class="team-member">
+                        <img src="images/rajesh-kumar.jpg" alt="Rajesh Kumar - Program Manager">
+                        <h4>Rajesh Kumar</h4>
+                        <p class="position">Program Manager</p>
+                        <p class="bio">Oversees all field operations and program implementation across 57 districts.</p>
+                        
+                        <div class="info-text" onclick="toggleContent('rajeshBio')">
+                            ℹ️ Learn More About Rajesh
+                        </div>
+                        
+                        <div class="expandable-content" id="rajeshBio">
+                            <p><strong>Education:</strong> Master's in Development Studies</p>
+                            <p><strong>Experience:</strong> 15+ years in community development</p>
+                            <p><strong>Expertise:</strong> Program implementation, Field operations, Community engagement</p>
+                            <p><strong>Languages:</strong> Bengali, English, Hindi</p>
+                            <button class="close-btn" onclick="toggleContent('rajeshBio')">Close</button>
+                        </div>
+                    </div>
+
+                    <!-- Finance Director's profile -->
+                    <div class="team-member">
+                        <img src="images/meera-patel.jpg" alt="Meera Patel - Finance Director">
+                        <h4>Meera Patel</h4>
+                        <p class="position">Finance Director</p>
+                        <p class="bio">Manages financial operations and donor fund allocation with transparency.</p>
+                        
+                        <div class="info-text" onclick="toggleContent('meeraBio')">
+                            ℹ️ Learn More About Meera
+                        </div>
+                        
+                        <div class="expandable-content" id="meeraBio">
+                            <p><strong>Education:</strong> Chartered Accountant, MBA in Finance</p>
+                            <p><strong>Experience:</strong> 12+ years in financial management</p>
+                            <p><strong>Expertise:</strong> Financial planning, Donor fund management, Transparency systems</p>
+                            <p><strong>Achievements:</strong> Implemented digital financial tracking system</p>
+                            <button class="close-btn" onclick="toggleContent('meeraBio')">Close</button>
+                        </div>
+                    </div>
+
+                    <!-- Operations Head's profile -->
+                    <div class="team-member">
+                        <img src="images/amit-singh.jpg" alt="Amit Singh - Operations Head">
+                        <h4>Amit Singh</h4>
+                        <p class="position">Operations Head</p>
+                        <p class="bio">Coordinates logistics and ensures efficient program delivery across all districts.</p>
+                        
+                        <div class="info-text" onclick="toggleContent('amitBio')">
+                            ℹ️ Learn More About Amit
+                        </div>
+                        
+                        <div class="expandable-content" id="amitBio">
+                            <p><strong>Education:</strong> Bachelor's in Operations Management</p>
+                            <p><strong>Experience:</strong> 10+ years in NGO operations</p>
+                            <p><strong>Expertise:</strong> Logistics management, Supply chain, Regional coordination</p>
+                            <p><strong>Skills:</strong> Crisis management, Multi-district operations, Team leadership</p>
+                            <button class="close-btn" onclick="toggleContent('amitBio')">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript for handling the expandable content functionality -->
+        <script>
+            // Toggles the visibility of expandable content sections
+            function toggleContent(contentId) {
+                const content = document.getElementById(contentId);
+                content.classList.toggle('show');
+            }
+            
+            // Special function for toggling the founder's story with smooth scrolling
+            function toggleFounderStory() {
+                const story = document.getElementById('founderStory');
+                story.classList.toggle('show');
+                
+                // If we're opening the story, smoothly scroll to it for better user experience
+                if (story.classList.contains('show')) {
+                    story.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            
+            // Close all expandable sections when clicking outside of them
+            // This improves usability by allowing users to easily close open sections
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.info-text') && !event.target.closest('.expandable-content') && !event.target.closest('.founder-expandable')) {
+                    document.querySelectorAll('.expandable-content, .founder-expandable').forEach(item => {
+                        item.classList.remove('show');
+                    });
+                }
+            });
+        </script>
+    </main>
+
+    <!-- Footer Section with contact information and copyright -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
+                <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
+                <p>123 Empowerment Street, Dhaka, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
