@@ -61,6 +61,7 @@ The website is designed to adapt seamlessly to different devices, ensuring a con
   - Optimized image scaling for small screens  
   - Larger buttons and form inputs for touch interactions  
   - Minimalist view of animations for performance efficiency
+    
   ![image alt](https://github.com/tramsahai/wede_p1-2/blob/756b34938931e3f8fc410f50187133af5af5003f/Screenshot%202025-09-29%20210929.png) 
     
 
