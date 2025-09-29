@@ -53,6 +53,7 @@ The website is designed to adapt seamlessly to different devices, ensuring a con
   - Simplified navigation menu with larger touch targets  
   - Adjusted typography for medium-sized screens  
   - Interactive elements optimized for both touch and click
+  - 
     ![image alt](https://github.com/tramsahai/wede_p1-2/blob/756b34938931e3f8fc410f50187133af5af5003f/Screenshot%202025-09-29%20210929.png) 
 
 - **Mobile Phones:**  
