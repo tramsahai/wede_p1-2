@@ -1,73 +1,129 @@
-## Sitemap 
-The Shakti Foundation website consists of six main pages, each serving a specific purpose in line with the organization's goals of promoting women's empowerment and facilitating donations.
+## Shakti Foundation Website
+A responsive website for Shakti Foundation, an organization dedicated to women's empowerment through microfinance, healthcare, education, and skills training programs in Bangladesh.
 
-Homepage (index.html) - The main landing page featuring a hero section, introduction to the foundation, success stories, and calls-to-action for donations and engagement.
+## Project Overview
+The Shakti Foundation website consists of six main pages designed to promote women's empowerment and facilitate donations through an intuitive, accessible interface.
 
-About Us (about.html) - This section contains the organization's history (founded in 1992 by Dr. Humaira Islam), vision (empowering disadvantaged women as leaders), mission (strengthening social and economic foundations), and information about the leadership team.
+## Website Structure
+Homepage (index.html) - Landing page featuring hero section, success stories, and calls-to-action with advanced hover animations and responsive design.
 
-Programs (programs.html) - Detailed information about all empowerment initiatives including Microfinance (loans and financial training), Healthcare (mobile clinics and community health), Education (scholarships and school programs), and Training Initiatives (vocational skills development).
+About Us (about.html) - Organization history (founded 1992 by Dr. Humaira Islam), vision, mission, and leadership team with expandable biography sections.
 
-Donate (donate.html) - A secure donation processing page with multiple payment options including PayPal, credit/debit cards, and bank transfer. Supports both one-time and recurring donations with automatic receipts.
+Programs (programs.html) - Detailed empowerment initiatives including Microfinance, Healthcare, Education, and Training with interactive info modals and impact statistics.
 
-Contact Us (contact.html) - Contains complete contact information including the physical address (House 5, Road 10, Baridhara J Block, Dhaka 1212, Bangladesh), phone number (+88 02 989 0424), email (info@shakti.org.bd), an interactive map, and a general contact form.
+Donate (donate.html) - Secure donation processing with multiple payment options, customizable amounts, and impact visualization.
 
-Enquiry (enquiry.html) - Specialized forms for specific inquiries including volunteer applications and corporate sponsorship/partnership opportunities, as required by the project brief.
+Contact Us (contact.html) - Complete contact information with interactive map, contact form, and multiple communication channels.
 
-This flat hierarchical structure ensures intuitive navigation and easy access to all important content, supporting the website's goals of increasing donations and promoting women's empowerment programs.
+Enquiry (enquiry.html) - Specialized forms for volunteer applications and partnership opportunities.
 
+## Features & Technical Implementation
+CSS Architecture & Design System
+External Stylesheet (style.css) with consistent naming conventions
+
+CSS Reset for cross-browser consistency
+
+Typography Hierarchy using relative units (rem/em)
+
+Color Scheme: Black background with Gold (#FFD700) and Dark Red (#B22222) accents
+
+Layout Systems: CSS Grid and Flexbox for complex responsive layouts
+
+Advanced Interactivity & Animations
+Hover Effects: Gold shimmer animations on navigation, shine sweep on donate button
+
+Interactive Elements: Lift-up transforms, scale effects, and smooth color transitions
+
+Expandable Content: Click-to-reveal sections for team biographies and program details
+
+Modal Windows: Popup information boxes for program details
+
+Smooth Transitions: CSS transitions and keyframe animations throughout
+
+Responsive Design Implementation
+Mobile-First Approach with progressive enhancement
+
+Breakpoints: 576px (mobile), 768px (tablet), 1200px (desktop)
+
+Relative Units: Comprehensive use of rem, em, and percentage-based layouts
+
+Flexible Images: max-width: 100% with object-fit: cover
+
+Adaptive Navigation: Stacked mobile menu to horizontal desktop navigation
+
+Technical Features
+Sticky Header with backdrop blur effect
+
+Responsive Images with high-DPI optimization
+
+Form Validation and accessible focus states
+
+Print Styles for better printing experience
+
+Lazy Loading support for images
+
+Accessibility: High contrast mode and reduced motion preferences
 
 ## Installation & Setup
+Clone or download this repository to your local machine
 
-1. Clone or download this repository to your local machine
-2. Open the project folder in your code editor
-3. Open `index.html` in your web browser to view the website
-4. For full functionality, ensure you have:
-   - A modern web browser (Chrome, Firefox, Safari, Edge)
-   - Internet connection (for external resources like fonts and maps)
+Open the project folder in your code editor
+
+Open index.html in your web browser to view the website
+
+## Requirements
+Modern web browser (Chrome, Firefox, Safari, Edge)
+
+Internet connection (for external resources like fonts and maps)
 
 ## How to Use
+Navigation: Use the responsive menu at the top to navigate between pages
 
-1. **Navigation:** Use the menu at the top to navigate between pages
-2. **Donations:** Click the "Donate" button to make a contribution
-3. **Contact:** Use the contact form or enquiry form to get in touch
-4. **Information:** Browse the Programs section to learn about initiatives
+Donations: Click "Donate Now" to access the secure donation portal
 
-## Challenges & Solutions
+Information: Browse Programs section with interactive info buttons for details
 
-**Challenge:** Creating a responsive design that works on all devices.
-**Solution:** Used CSS Flexbox and Media Queries to adapt layout for different screen sizes.
+Contact: Use contact forms or direct communication channels
 
-**Challenge:** Implementing a secure donation system.
-**Solution:** Integrated reputable payment gateways (PayPal/Stripe) for secure transactions.
+Mobile: Fully optimized for touch interactions and mobile browsing
 
-**Challenge:** Ensuring accessibility for all users.
-**Solution:** Followed WCAG guidelines for color contrast, keyboard navigation, and screen reader compatibility.
+## Development Challenges & Solutions
+Challenge: Responsive design across devices
+Solution: Mobile-first CSS with Flexbox/Grid and media queries
+
+Challenge: Consistent hover animations
+Solution: Advanced CSS transitions with pseudo-elements
+
+Challenge: Header navigation glitches
+Solution: Fixed with consistent padding units and flex-wrap control
+
+Challenge: Image responsiveness
+Solution: max-width: 100% with height: auto and object-fit
+
+Challenge: Cross-browser compatibility
+Solution: CSS reset and progressive enhancement
 
 ## Future Improvements
+Multilingual support (Bengali/English)
 
--  Add multilingual support (Bengali/English)
--  Implement a blog/news section
--  Add user authentication for volunteers
--  Integrate a content management system (CMS)
-- Add more interactive elements and animations
+Blog/news section for updates
 
-## Credits
+User authentication for volunteers
 
-- **Shakti Foundation:** For the organization information and mission
-- **Unsplash:** For royalty-free images
-- **Font Awesome:** For icons
-- **Google Fonts:** For typography (Poppins, Open Sans)
+Content management system (CMS) integration
 
-## License
+Enhanced animation library
 
-This project is created for educational purposes as part of my college assignment. All rights belong to their respective owners.
+Real-time donation tracking
+
+Interactive program impact visualizations
 
 ## Contact
+Developer: Thasmei Ramsahai
+Project: Educational assignment - not the official Shakti Foundation website
 
-Created by [Thasmei Ramsahai] - feel free to contact me for any questions!
+## License
+This project was created for educational purposes as part of a college assignment. All rights for Shakti Foundation content belong to their respective owners.
 
+Note: This is a student project created for assessment purposes. This is not the official website of Shakti Foundation.
 
-
-**Note:** This is a student project created for assessment purposes. This is not the official website of Shakti Foundation.
-
-S
