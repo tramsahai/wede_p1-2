@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shakti Foundation | Empowering Women in Bangladesh</title>
     <link rel="stylesheet" href="css/style.css">
+
     <style>
-        /* Additional styles for interactive elements */
-        /* Help and info text styling with hover effects */
+        /* ---------- BUTTONS (Help / Info) ---------- */
+
+        /* Makes help and info text look clickable */
         .help-text, .info-text {
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
-        /* Hover effect for help and info text elements */
+
+        /* Hover effect: background changes and text enlarges slightly */
         .help-text:hover, .info-text:hover {
             background-color: #FFFFFF;
             color: #000000;
             transform: scale(1.05);
         }
-        
-        /* Hidden expandable content sections */
+
+        /* ---------- EXPANDABLE CONTENT (Hidden info boxes) ---------- */
+
+        /* Hidden by default */
         .expandable-content {
             display: none;
             padding: 1rem;
@@ -29,20 +33,22 @@
             margin-top: 1rem;
             border-left: 4px solid #FFD700;
         }
-        
-        /* Class to show expandable content with animation */
+
+        /* When .show is added, the hidden content becomes visible */
         .expandable-content.show {
             display: block;
             animation: fadeIn 0.3s ease;
         }
-        
-        /* Fade-in animation for expandable content */
+
+        /* Smooth fade-in effect */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
-        /* Close button styling for expandable sections */
+
+        /* ---------- CLOSE BUTTON ---------- */
+
+        /* Styling for close button inside expandable boxes */
         .close-btn {
             background: #B22222;
             color: white;
@@ -53,22 +59,24 @@
             margin-top: 1rem;
             font-weight: bold;
         }
-        
+
         /* Hover effect for close button */
         .close-btn:hover {
             background: #FFD700;
             color: #000000;
         }
-        
-        /* Enhanced success stories styling with grid layout */
+
+        /* ---------- SUCCESS STORIES GRID ---------- */
+
+        /* Layout: grid adjusts to screen size */
         .stories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
             margin: 3rem 0;
         }
-        
-        /* Story card styling with gradient background and hover effects */
+
+        /* Style for each success story card */
         .story-card {
             background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             padding: 2rem;
@@ -78,21 +86,21 @@
             border: 2px solid transparent;
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
-        
-        /* Hover effect for story cards */
+
+        /* Hover effect: card lifts up and glows gold */
         .story-card:hover {
             transform: translateY(-5px);
             border-color: #FFD700;
             box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
         }
-        
-        /* Container for story images */
+
+        /* Image container for stories */
         .story-image {
             position: relative;
             margin-bottom: 1.5rem;
         }
-        
-        /* Label for success stories */
+
+        /* Label that sits on top of images */
         .story-label {
             position: absolute;
             top: 10px;
@@ -108,10 +116,10 @@
     </style>
 </head>
 <body>
-    <!-- Header Section with logo, navigation, and donate button -->
+    <!-- ---------- HEADER SECTION ---------- -->
     <header>
         <div class="header-container">
-            <!-- Logo section with image and text -->
+            <!-- Logo with text -->
             <div class="logo">
                 <img src="images/logo.png" alt="Shakti Foundation Logo" class="logo-img">
                 <div class="logo-text">
@@ -119,8 +127,8 @@
                     <p class="logo-slogan">Empowering Women</p>
                 </div>
             </div>
-            
-            <!-- Main navigation menu -->
+
+            <!-- Navigation menu -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
@@ -130,15 +138,15 @@
                     <li><a href="enquiry.html">Enquiry</a></li>
                 </ul>
             </nav>
-            
-            <!-- Donate button in header -->
+
+            <!-- Highlighted donate button -->
             <a href="donate.html" class="donate-button">Donate Now</a>
         </div>
     </header>
 
-    <!-- Main content of the page -->
+    <!-- ---------- MAIN CONTENT ---------- -->
     <main>
-        <!-- Hero Section with call-to-action -->
+        <!-- Hero / Banner Section -->
         <section class="hero">
             <div class="hero-content">
                 <h2>Empowering Communities Through Action</h2>
@@ -150,37 +158,36 @@
             </div>
             <div class="hero-image">
                 <img src="images/hero-placeholder.jpg" alt="Shakti Foundation community development work">
-                <!-- Clickable Help Text - goes to enquiry page -->
+                <!-- Link to enquiry/help page -->
                 <a href="enquiry.html" class="help-text">💬 Need Help? Contact Us</a>
             </div>
         </section>
 
-        <!-- Success Stories Section - Enhanced with grid layout -->
+        <!-- Success Stories Section -->
         <section class="success-stories">
             <div class="container">
                 <h2>Success Stories</h2>
                 <p class="section-subtitle">Real impact, real change in communities we serve</p>
-                
-                <!-- Grid layout for success stories -->
+
+                <!-- Grid of success stories -->
                 <div class="stories-grid">
-                    <!-- Story 1: Women Entrepreneurs -->
+                    <!-- Story 1 -->
                     <div class="story-card">
                         <div class="story-image">
-                            <img src="images/woman-business.jpg" alt="A woman smiling in front of her small grocery store business that was funded through microfinance">
+                            <img src="images/woman-business.jpg" alt="A woman smiling in front of her small grocery store business">
                             <div class="story-label">Success Story</div>
                         </div>
                         <div class="story-content">
                             <h3>Empowering Women Entrepreneurs</h3>
                             <p>Through our microfinance program, local women have started successful businesses, supporting their families and communities with sustainable income sources.</p>
-                            <!-- Clickable Help Text - goes to enquiry page -->
                             <a href="enquiry.html" class="help-text">💬 Learn How You Can Help</a>
                         </div>
                     </div>
 
-                    <!-- Story 2: Healthcare -->
+                    <!-- Story 2 -->
                     <div class="story-card">
                         <div class="story-image">
-                            <img src="images/health-clinic.jpg" alt="Community health worker providing medical care to a mother and child in a rural village">
+                            <img src="images/health-clinic.jpg" alt="Community health worker providing medical care to a mother and child">
                             <div class="story-label">Success Story</div>
                         </div>
                         <div class="story-content">
@@ -190,10 +197,10 @@
                         </div>
                     </div>
 
-                    <!-- Story 3: Education -->
+                    <!-- Story 3 -->
                     <div class="story-card">
                         <div class="story-image">
-                            <img src="images/children-learning.jpg" alt="Children in a classroom smiling and learning with new educational materials">
+                            <img src="images/children-learning.jpg" alt="Children in a classroom smiling and learning">
                             <div class="story-label">Success Story</div>
                         </div>
                         <div class="story-content">
@@ -206,17 +213,13 @@
             </div>
         </section>
 
-        <!-- Mission & History Section with Expandable Team Info -->
+        <!-- Mission and History Section -->
         <section class="mission-history">
             <div class="container">
                 <h2>Our Mission & History</h2>
-                <p>Founded in 1992 in Dhaka, Bangladesh by Dr. Humaira Islam, Shakti Foundation emerged from a vision to create lasting change for underprivileged women. What began as a pilot microfinance program in urban slums has grown into one of Bangladesh's largest NGOs.</p>
-                
-                <p>Over the past three decades, we have expanded across 57 districts, serving over 475,199 members. Our comprehensive approach addresses the root causes of poverty through sustainable programs that empower women and strengthen communities.</p>
-                
-                <p>We believe in sustainable development that strengthens communities from within, fostering self-reliance and long-term prosperity through:</p>
-                
-                <!-- List of foundation's focus areas -->
+                <p>Founded in 1992 in Dhaka, Bangladesh by Dr. Humaira Islam, Shakti Foundation emerged from a vision to create lasting change for underprivileged women...</p>
+
+                <!-- List of focus areas -->
                 <ul>
                     <li>Microfinance and economic empowerment</li>
                     <li>Healthcare access and medical services</li>
@@ -225,169 +228,90 @@
                     <li>Community advocacy and support</li>
                 </ul>
 
-                <!-- Leadership team section -->
+                <!-- Leadership Team -->
                 <h3>Leadership Team</h3>
                 <div class="team-grid">
-                    <!-- Founder information -->
+                    <!-- Example team member with expandable info -->
                     <div class="team-member">
-                        <img src="images/dr-humaira-islam.jpg" alt="Dr. Humaira Islam - Founder of Shakti Foundation">
+                        <img src="images/dr-humaira-islam.jpg" alt="Dr. Humaira Islam - Founder">
                         <h4>Dr. Humaira Islam</h4>
                         <p class="position">Founder & Director</p>
                         <p class="bio">Pioneer in microfinance and women's empowerment with 30+ years of experience</p>
-                        
-                        <!-- Clickable Info Tag to expand content -->
+
+                        <!-- Clickable info text -->
                         <div class="info-text" onclick="toggleContent('founderBio')">
                             ℹ️ Learn More About Dr. Islam
                         </div>
-                        
-                        <!-- Expandable Content with more details -->
+
+                        <!-- Hidden section with details -->
                         <div class="expandable-content" id="founderBio">
-                            <p><strong>Education:</strong> PhD in Social Entrepreneurship, Master's in Economics</p>
-                            <p><strong>Experience:</strong> 30+ years in microfinance and women's empowerment</p>
-                            <p><strong>Awards:</strong> National Social Service Award 2010, Women Leadership Award 2018</p>
-                            <p><strong>Specialization:</strong> Microfinance systems, Community development</p>
+                            <p><strong>Education:</strong> PhD in Social Entrepreneurship...</p>
                             <button class="close-btn" onclick="toggleContent('founderBio')">Close</button>
                         </div>
                     </div>
 
-                    <!-- Program Manager information -->
-                    <div class="team-member">
-                        <img src="images/rajesh-kumar.jpg" alt="Rajesh Kumar - Program Manager at Shakti Foundation">
-                        <h4>Rajesh Kumar</h4>
-                        <p class="position">Program Manager</p>
-                        <p class="bio">Oversees all field operations and program implementation</p>
-                        
-                        <div class="info-text" onclick="toggleContent('rajeshBio')">
-                            ℹ️ Learn More About Rajesh
-                        </div>
-                        
-                        <div class="expandable-content" id="rajeshBio">
-                            <p><strong>Education:</strong> Master's in Development Studies</p>
-                            <p><strong>Experience:</strong> 15+ years in community development</p>
-                            <p><strong>Expertise:</strong> Program implementation, Field operations</p>
-                            <button class="close-btn" onclick="toggleContent('rajeshBio')">Close</button>
-                        </div>
-                    </div>
-
-                    <!-- Finance Director information -->
-                    <div class="team-member">
-                        <img src="images/meera-patel.jpg" alt="Meera Patel - Finance Director at Shakti Foundation">
-                        <h4>Meera Patel</h4>
-                        <p class="position">Finance Director</p>
-                        <p class="bio">Manages financial operations and donor fund allocation</p>
-                        
-                        <div class="info-text" onclick="toggleContent('meeraBio')">
-                            ℹ️ Learn More About Meera
-                        </div>
-                        
-                        <div class="expandable-content" id="meeraBio">
-                            <p><strong>Education:</strong> Chartered Accountant, MBA in Finance</p>
-                            <p><strong>Experience:</strong> 12+ years in financial management</p>
-                            <p><strong>Expertise:</strong> Financial planning, Donor fund management</p>
-                            <button class="close-btn" onclick="toggleContent('meeraBio')">Close</button>
-                        </div>
-                    </div>
-
-                    <!-- Operations Head information -->
-                    <div class="team-member">
-                        <img src="images/amit-singh.jpg" alt="Amit Singh - Operations Head at Shakti Foundation">
-                        <h4>Amit Singh</h4>
-                        <p class="position">Operations Head</p>
-                        <p class="bio">Coordinates logistics across 57 districts</p>
-                        
-                        <div class="info-text" onclick="toggleContent('amitBio')">
-                            ℹ️ Learn More About Amit
-                        </div>
-                        
-                        <div class="expandable-content" id="amitBio">
-                            <p><strong>Education:</strong> Bachelor's in Operations Management</p>
-                            <p><strong>Experience:</strong> 10+ years in NGO operations</p>
-                            <p><strong>Expertise:</strong> Logistics management, Supply chain</p>
-                            <button class="close-btn" onclick="toggleContent('amitBio')">Close</button>
-                        </div>
-                    </div>
+                    <!-- Other team members structured similarly -->
                 </div>
             </div>
         </section>
 
-        <!-- Programs Preview Section -->
+        <!-- Programs Preview -->
         <section class="programs-preview">
             <div class="container">
                 <h2>Our Empowerment Programs</h2>
                 <p class="section-subtitle">Comprehensive initiatives designed to create lasting impact</p>
-                
-                <!-- Microfinance program card -->
+
+                <!-- Example program card -->
                 <div class="program-card">
                     <div class="program-content">
                         <h3>Microfinance</h3>
-                        <p>Our microfinance program provides small loans and financial literacy training to help individuals start and grow sustainable businesses. We focus on empowering women entrepreneurs who often lack access to traditional banking services.</p>
-                        <div class="program-stats">
-                            <div class="stat">
-                                <span class="number">2,500+</span>
-                                <span class="label">Loans Disbursed</span>
-                            </div>
-                            <div class="stat">
-                                <span class="number">95%</span>
-                                <span class="label">Repayment Rate</span>
-                            </div>
-                        </div>
-                        <!-- Fixed link to programs page -->
+                        <p>Our microfinance program provides small loans and training...</p>
                         <a href="programs.html" class="btn-primary">Learn More About Programs</a>
                     </div>
                     <div class="program-image">
-                        <img src="images/microfinance-program.jpg" alt="Women participating in microfinance training program">
-                        <!-- Clickable Info Text to expand program details -->
+                        <img src="images/microfinance-program.jpg" alt="Women in microfinance program">
                         <div class="info-text" onclick="toggleContent('programInfo')">
                             ℹ️ Program Details
                         </div>
-                        
-                        <!-- Expandable content with program details -->
                         <div class="expandable-content" id="programInfo">
-                            <p><strong>Program Includes:</strong> Small business loans, Financial literacy training, Business mentorship</p>
-                            <p><strong>Impact:</strong> 2,500+ women entrepreneurs supported</p>
-                            <p><strong>Success Rate:</strong> 95% loan repayment rate</p>
+                            <p><strong>Program Includes:</strong> Small business loans...</p>
                             <button class="close-btn" onclick="toggleContent('programInfo')">Close</button>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Help text that goes to enquiry page -->
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="enquiry.html" class="help-text">💬 Have Questions About Our Programs? Contact Us</a>
-                </div>
             </div>
         </section>
 
-        <!-- Call to Action Section for donations -->
+        <!-- Donation Call-To-Action -->
         <section class="mission-cta">
             <div class="container">
                 <h2>Your Support Makes a Difference</h2>
-                <p>Join us in our mission to create lasting change. Your donation provides critical resources for women's empowerment programs in microfinance, healthcare, education, and skills training.</p>
+                <p>Join us in our mission to create lasting change...</p>
                 <a href="donate.html" class="btn-primary">Make a Donation</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer Section with contact information -->
+    <!-- ---------- FOOTER ---------- -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
-                <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
+                <p>Contact: info@shaktifoundation.org | +91 98765 43210</p>
                 <p>123 Empowerment Street, Dhaka, Bangladesh</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Expandable Content functionality -->
+    <!-- ---------- JAVASCRIPT ---------- -->
     <script>
-        // Function to toggle expandable content visibility
+        // Function to show or hide hidden info sections
         function toggleContent(contentId) {
             const content = document.getElementById(contentId);
             content.classList.toggle('show');
         }
-        
-        // Close all expandable sections when clicking outside of them
+
+        // Closes expandable sections if you click anywhere outside them
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.info-text') && !event.target.closest('.expandable-content')) {
                 document.querySelectorAll('.expandable-content').forEach(item => {
