@@ -2,41 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures the site is mobile-friendly by adjusting to screen size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Shakti Foundation</title>
+
+    <!-- Linking external stylesheet for global styles -->
     <link rel="stylesheet" href="css/style.css">
+
     <style>
-        /* Additional styles for expandable content sections */
-        /* These make our info text elements interactive and visually appealing */
+        /* ---------- Extra Styling for Expandable Sections ---------- */
+
+        /* Text elements that can be clicked to show/hide more content */
         .info-text {
             cursor: pointer;
             transition: all 0.3s ease;
         }
         
-        /* Hover effect for info text - changes background and text color */
+        /* Hover effect for interactive text */
         .info-text:hover {
             background-color: #FFFFFF;
             color: #000000;
-            transform: scale(1.05);
+            transform: scale(1.05); /* Grows slightly when hovered */
         }
         
-        /* Base styling for expandable content sections - hidden by default */
+        /* Hidden content sections - revealed when 'show' class is applied */
         .expandable-content {
             display: none;
             padding: 1rem;
             background: #1a1a1a;
             border-radius: 8px;
             margin-top: 1rem;
-            border-left: 4px solid #FFD700;
+            border-left: 4px solid #FFD700; /* Gold accent border */
         }
         
-        /* When the 'show' class is added, content becomes visible with a fade animation */
+        /* Fade-in animation for normal expandable content */
         .expandable-content.show {
             display: block;
             animation: fadeIn 0.3s ease;
         }
         
-        /* Special expanded section for the founder's story - more prominent styling */
+        /* Special styling for the founder’s biography section */
         .founder-expandable {
             display: none;
             padding: 2rem;
@@ -46,19 +51,19 @@
             border: 2px solid #FFD700;
         }
         
-        /* Show the founder's story with a slide-down animation */
+        /* Founder story expands with a slide-down effect */
         .founder-expandable.show {
             display: block;
             animation: slideDown 0.5s ease;
         }
         
-        /* Simple fade-in animation for content reveals */
+        /* Smooth fade-in animation */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         
-        /* Slide down animation for more prominent content reveals */
+        /* Slide-down animation for larger reveals */
         @keyframes slideDown {
             from { 
                 opacity: 0;
@@ -70,9 +75,9 @@
             }
         }
         
-        /* Styling for the close buttons in our expandable sections */
+        /* Close button styling inside expandable sections */
         .close-btn {
-            background: #B22222;
+            background: #B22222; /* Dark red */
             color: white;
             border: none;
             padding: 8px 16px;
@@ -82,7 +87,7 @@
             font-weight: bold;
         }
         
-        /* Hover effect for close buttons - gold background with black text */
+        /* Close button hover effect - switches to gold */
         .close-btn:hover {
             background: #FFD700;
             color: #000000;
@@ -90,10 +95,10 @@
     </style>
 </head>
 <body>
-    <!-- Header Section with navigation -->
+    <!-- ---------- HEADER SECTION ---------- -->
     <header>
         <div class="header-container">
-            <!-- Logo section with image and text elements -->
+            <!-- Logo with image + text -->
             <div class="logo">
                 <img src="images/logo.png" alt="Shakti Foundation Logo" class="logo-img">
                 <div class="logo-text">
@@ -102,7 +107,7 @@
                 </div>
             </div>
             
-            <!-- Main navigation menu - About Us is currently active -->
+            <!-- Main Navigation Menu -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
@@ -113,13 +118,13 @@
                 </ul>
             </nav>
             
-            <!-- Donate button - prominent call to action -->
+            <!-- Donate button (call to action) -->
             <a href="donate.html" class="donate-button">Donate Now</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero section for the About page - introduces the organization -->
+        <!-- ---------- HERO SECTION ---------- -->
         <section class="about-hero">
             <div class="container">
                 <h2>About Shakti Foundation</h2>
@@ -127,24 +132,25 @@
             </div>
         </section>
 
-        <!-- Our Story Section - details the foundation's history and origins -->
+        <!-- ---------- OUR STORY SECTION ---------- -->
         <section class="our-story">
             <div class="container">
                 <h2>Our Story</h2>
                 <div class="story-content">
                     <div class="story-text">
+                        <!-- Brief history of the foundation -->
                         <p>Shakti Foundation was founded in 1992 in Dhaka, Bangladesh by <strong>Dr. Humaira Islam</strong> and a team of social innovators dedicated to empowering underprivileged women through microfinance.</p>
                         
                         <p>What began as a pilot microfinance program for women living in urban slums rapidly expanded into both urban and rural regions, transforming Shakti into one of the largest NGOs in Bangladesh.</p>
                         
                         <p>Today, Shakti operates across <strong>57 districts</strong> with over <strong>475,199 members</strong>. While microcredit remains central to our mission, we now offer comprehensive programs including healthcare, education, agro-business, renewable energy, skills training, and advocacy.</p>
                         
-                        <!-- Interactive element to expand the founder's story -->
+                        <!-- Expandable text trigger -->
                         <div class="info-text" onclick="toggleFounderStory()">
                             📖 Read Dr. Humaira Islam's Full Story
                         </div>
                         
-                        <!-- Expandable section containing the founder's detailed biography -->
+                        <!-- Founder’s full biography (hidden by default) -->
                         <div class="founder-expandable" id="founderStory">
                             <h3>Dr. Humaira Islam's Journey</h3>
                             <p>Dr. Humaira Islam, a visionary social entrepreneur, founded Shakti Foundation in 1992 with a simple yet powerful belief: that every woman deserves the opportunity to become self-reliant and empowered.</p>
@@ -159,13 +165,14 @@
                             
                             <p><strong>Philosophy:</strong> "Empower a woman, and you empower an entire community. When women have access to resources and opportunities, they become catalysts for sustainable change."</p>
                             
-                            <!-- Button to close the expanded founder story section -->
+                            <!-- Close button for founder story -->
                             <button class="close-btn" onclick="toggleFounderStory()">Close Story</button>
                         </div>
                     </div>
+
+                    <!-- Supporting image + alternative trigger -->
                     <div class="story-image">
                         <img src="images/founder-story.jpg" alt="Dr. Humaira Islam with community women">
-                        <!-- Alternative way to expand the founder's story by clicking on the image caption -->
                         <div class="info-text" onclick="toggleFounderStory()">
                             ℹ️ Click to Learn More About Dr. Islam
                         </div>
@@ -174,16 +181,16 @@
             </div>
         </section>
 
-        <!-- Mission & Vision Section - outlines the organization's core purpose and future goals -->
+        <!-- ---------- MISSION & VISION SECTION ---------- -->
         <section class="mission-vision">
             <div class="container">
                 <div class="mv-grid">
-                    <!-- Vision card - what we aspire to achieve long-term -->
+                    <!-- Vision card -->
                     <div class="mv-card">
                         <h3>Our Vision</h3>
                         <p>To empower disadvantaged women to become leaders, entrepreneurs, and agents of change in their communities, creating a world where gender equality is a reality.</p>
                     </div>
-                    <!-- Mission card - what we do to achieve our vision -->
+                    <!-- Mission card -->
                     <div class="mv-card">
                         <h3>Our Mission</h3>
                         <p>To strengthen the social and economic foundations of poor women in Bangladesh through microfinance, education, healthcare, and skills training, while encouraging donations and partnerships to sustain these efforts.</p>
@@ -192,26 +199,27 @@
             </div>
         </section>
 
-        <!-- Leadership Team Section - introduces the key people driving the organization -->
+        <!-- ---------- LEADERSHIP TEAM SECTION ---------- -->
         <section class="leadership-team">
             <div class="container">
                 <h2>Leadership Team</h2>
                 <p class="section-subtitle">Dedicated professionals driving our mission forward</p>
                 
                 <div class="team-grid">
-                    <!-- Founder's profile - most prominent team member -->
+                    <!-- Each team member has a short profile + expandable biography -->
+                    
+                    <!-- Founder -->
                     <div class="team-member">
                         <img src="images/dr-humaira-islam.jpg" alt="Dr. Humaira Islam - Founder and Director">
                         <h4>Dr. Humaira Islam</h4>
                         <p class="position">Founder & Director</p>
                         <p class="bio">Pioneer in microfinance and women's empowerment with 30+ years of experience.</p>
                         
-                        <!-- Clickable element to expand detailed biography -->
                         <div class="info-text" onclick="toggleContent('founderBio')">
                             ℹ️ Learn More About Dr. Islam
                         </div>
                         
-                        <!-- Expandable content with detailed professional information -->
+                        <!-- Expandable details -->
                         <div class="expandable-content" id="founderBio">
                             <p><strong>Education:</strong> PhD in Social Entrepreneurship, Master's in Economics</p>
                             <p><strong>Experience:</strong> 30+ years in microfinance and women's empowerment</p>
@@ -221,7 +229,7 @@
                         </div>
                     </div>
 
-                    <!-- Program Manager's profile -->
+                    <!-- Program Manager -->
                     <div class="team-member">
                         <img src="images/rajesh-kumar.jpg" alt="Rajesh Kumar - Program Manager">
                         <h4>Rajesh Kumar</h4>
@@ -241,7 +249,7 @@
                         </div>
                     </div>
 
-                    <!-- Finance Director's profile -->
+                    <!-- Finance Director -->
                     <div class="team-member">
                         <img src="images/meera-patel.jpg" alt="Meera Patel - Finance Director">
                         <h4>Meera Patel</h4>
@@ -261,7 +269,7 @@
                         </div>
                     </div>
 
-                    <!-- Operations Head's profile -->
+                    <!-- Operations Head -->
                     <div class="team-member">
                         <img src="images/amit-singh.jpg" alt="Amit Singh - Operations Head">
                         <h4>Amit Singh</h4>
@@ -284,29 +292,32 @@
             </div>
         </section>
 
-        <!-- JavaScript for handling the expandable content functionality -->
+        <!-- ---------- JAVASCRIPT SECTION ---------- -->
         <script>
-            // Toggles the visibility of expandable content sections
+            // General toggle function for team bios
             function toggleContent(contentId) {
                 const content = document.getElementById(contentId);
                 content.classList.toggle('show');
             }
             
-            // Special function for toggling the founder's story with smooth scrolling
+            // Toggle for founder’s story with smooth scroll
             function toggleFounderStory() {
                 const story = document.getElementById('founderStory');
                 story.classList.toggle('show');
                 
-                // If we're opening the story, smoothly scroll to it for better user experience
+                // Scroll into view when opening
                 if (story.classList.contains('show')) {
                     story.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
             
-            // Close all expandable sections when clicking outside of them
-            // This improves usability by allowing users to easily close open sections
+            // Close any open expandable section when clicking outside
             document.addEventListener('click', function(event) {
-                if (!event.target.closest('.info-text') && !event.target.closest('.expandable-content') && !event.target.closest('.founder-expandable')) {
+                if (
+                    !event.target.closest('.info-text') && 
+                    !event.target.closest('.expandable-content') && 
+                    !event.target.closest('.founder-expandable')
+                ) {
                     document.querySelectorAll('.expandable-content, .founder-expandable').forEach(item => {
                         item.classList.remove('show');
                     });
@@ -315,7 +326,7 @@
         </script>
     </main>
 
-    <!-- Footer Section with contact information and copyright -->
+    <!-- ---------- FOOTER SECTION ---------- -->
     <footer>
         <div class="container">
             <div class="footer-content">
