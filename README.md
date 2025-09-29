@@ -46,7 +46,7 @@ The website is designed to adapt seamlessly to different devices, ensuring a con
   - Full navigation menu displayed horizontally  
   - Hero banners and program statistics shown in wide format  
   - Ample spacing for readability on large screens
-    
+    ![image alt](https://github.com/tramsahai/wede_p1-2/blob/82757de1a6170a0a06604ddfedfb5151af052d1e/Screenshot%202025-09-29%20200028.png)
 
 - **Tablet:**  
   - Two-column layouts where applicable (e.g., text alongside images)  
