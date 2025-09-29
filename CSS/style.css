@@ -1,18 +1,15 @@
 /* ===== CSS RESET & BASE STYLES ===== */
-/* Remove default browser margin/padding and make box-sizing predictable */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set base font size and enable smooth scrolling for anchor links */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
-/* Set body font, line height, text color, and background color */
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 1rem;
@@ -24,14 +21,13 @@ body {
 }
 
 /* ===== TYPOGRAPHY STYLES ===== */
-/* Headings h1-h4 with size, weight, spacing, and colors */
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.0625rem;
     margin-bottom: 1rem;
-    color: #FFD700; /* Gold color for emphasis */
+    color: #FFD700;
 }
 
 h2 {
@@ -59,7 +55,6 @@ h4 {
     color: #FFFFFF;
 }
 
-/* Paragraph styling for readability */
 p {
     font-size: 1rem;
     line-height: 1.6;
@@ -67,7 +62,6 @@ p {
     color: #CCCCCC;
 }
 
-/* Subtitles with gold color and centered text */
 .section-subtitle {
     font-size: 1.1rem;
     color: #FFD700;
@@ -77,14 +71,12 @@ p {
 }
 
 /* ===== LAYOUT STRUCTURE ===== */
-/* Container centers content and limits width */
 .container {
     max-width: 75rem;
     margin: 0 auto;
     padding: 0 1.25rem;
 }
 
-/* Header with sticky position, blur effect, gold border, and shadow */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -100,7 +92,6 @@ p {
     box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3);
 }
 
-/* Hero section grid for image + text side by side */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -109,7 +100,6 @@ p {
     align-items: center;
 }
 
-/* Story section grid similar to hero */
 .story-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,7 +108,6 @@ p {
     margin: 2rem 0;
 }
 
-/* Grid for multiple story cards */
 .stories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
@@ -126,7 +115,6 @@ p {
     margin: 2rem 0;
 }
 
-/* Grid for team members */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
@@ -134,7 +122,6 @@ p {
     margin: 2rem 0;
 }
 
-/* Form rows with 2 columns */
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,7 +130,6 @@ p {
 }
 
 /* ===== DECORATION & COLOR ===== */
-/* Logo container flexbox layout */
 .logo {
     display: flex;
     align-items: center;
@@ -151,7 +137,6 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Logo image circle with gold border and subtle gradient */
 .logo-img {
     width: 3.75rem;
     height: 3.75rem;
@@ -163,7 +148,6 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Logo main text in gold with uppercase and shadow */
 .logo-main {
     font-size: 2.2rem;
     font-weight: 800;
@@ -175,7 +159,6 @@ p {
     transition: all 0.3s ease;
 }
 
-/* Small slogan under logo with gradient and gold border */
 .logo-slogan {
     font-size: 0.85rem;
     color: #FFFFFF;
@@ -190,8 +173,7 @@ p {
     transition: all 0.3s ease;
 }
 
-/* ===== NAVIGATION MENU ===== */
-/* Flex menu layout */
+/* ===== FIXED NAVIGATION MENU ===== */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -199,20 +181,18 @@ p {
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
-/* Prevent menu items from wrapping */
 .nav-menu li {
     position: relative;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Menu links styling and hover effects */
 .nav-menu a {
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.25rem; /* Fixed padding - using rem instead of em */
     border-radius: 0.5rem;
     font-weight: 600;
     font-size: 0.95rem;
@@ -224,10 +204,9 @@ p {
     display: block;
     text-align: center;
     min-width: 5rem;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Hover gradient effect for links */
 .nav-menu a::before {
     content: '';
     position: absolute;
@@ -243,7 +222,6 @@ p {
     left: 100%;
 }
 
-/* Bottom underline animation */
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -261,7 +239,14 @@ p {
     width: 80%;
 }
 
-/* Active link style */
+.nav-menu a:hover {
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
+    border: 0.125rem solid rgba(255, 215, 0, 0.3);
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(255, 215, 0, 0.3);
+}
+
 .nav-menu a.active {
     color: #FFD700;
     background: rgba(255, 215, 0, 0.15);
@@ -269,12 +254,17 @@ p {
     box-shadow: 0 0.25rem 0.9375rem rgba(255, 215, 0, 0.4);
 }
 
+.nav-menu a.active::after {
+    width: 80%;
+    background: #FFD700;
+}
+
 /* ===== BUTTON STYLES ===== */
-/* Primary donate button with gradient, shadow, and hover effect */
 .donate-button {
     background: linear-gradient(45deg, #B22222, #FF6B6B);
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Fixed padding */
+    text-decoration: none;
     border-radius: 0.625rem;
     font-weight: 700;
     font-size: 0.95rem;
@@ -285,11 +275,10 @@ p {
     box-shadow: 0 0.25rem 0.9375rem rgba(178, 34, 34, 0.4);
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+    white-space: nowrap; /* Prevent text wrapping */
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
-/* Hover shine effect */
 .donate-button::before {
     content: '';
     position: absolute;
@@ -313,12 +302,13 @@ p {
     box-shadow: 0 0.75rem 1.5625rem rgba(255, 215, 0, 0.5);
 }
 
-/* Simple primary button */
 .btn-primary {
     background-color: #B22222;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Fixed padding */
+    text-decoration: none;
     border-radius: 0.25rem;
+    display: inline-block;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -328,12 +318,13 @@ p {
     color: #000000;
 }
 
-/* Simple secondary button */
 .btn-secondary {
     background-color: #FFD700;
     color: black;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem; /* Fixed padding */
+    text-decoration: none;
     border-radius: 0.25rem;
+    display: inline-block;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -343,21 +334,25 @@ p {
     color: #000000;
 }
 
-/* Hero buttons container */
 .hero-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-/* ===== RESPONSIVE IMAGES ===== */
+/* ===== RESPONSIVE IMAGES (3.3) ===== */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Specific hero image styling */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
 .hero-image img {
     width: 100%;
     max-width: 31.25rem;
@@ -368,7 +363,6 @@ img {
     border: 0.125rem solid #FFD700;
 }
 
-/* Story image styling */
 .story-image img {
     width: 100%;
     max-width: 21.875rem;
@@ -380,7 +374,6 @@ img {
     border: 0.125rem solid #B22222;
 }
 
-/* Team member images circular with gold border */
 .team-member img {
     width: 100%;
     max-width: 12.5rem;
@@ -391,7 +384,6 @@ img {
     border: 0.1875rem solid #FFD700;
 }
 
-/* Program images */
 .program-image img {
     width: 100%;
     max-width: 25rem;
@@ -402,7 +394,12 @@ img {
     border: 0.125rem solid #B22222;
 }
 
-/* Lazy load fade-in effect */
+.picture-fallback {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 img[loading="lazy"] {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -413,12 +410,18 @@ img[loading="lazy"].loaded {
 }
 
 /* ===== CARD STYLES ===== */
-.story-card,
-.team-member {
+.story-card {
     background: #1a1a1a;
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center;
+}
+
+.team-member {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
 }
 
 /* ===== FORM STYLES ===== */
@@ -456,7 +459,6 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ===== INTERACTIVE ELEMENTS ===== */
-/* Tooltips and small info boxes */
 .help-text, .info-text {
     background-color: #FFD700;
     color: #000000;
@@ -476,7 +478,6 @@ input:focus, textarea:focus, select:focus {
     transform: scale(1.05);
 }
 
-/* Small red label for stories */
 .story-label {
     background-color: #B22222;
     color: #FFFFFF;
@@ -487,7 +488,6 @@ input:focus, textarea:focus, select:focus {
     display: inline-block;
 }
 
-/* Expandable content section */
 .expandable-content {
     display: none;
     padding: 1rem;
@@ -502,13 +502,11 @@ input:focus, textarea:focus, select:focus {
     animation: fadeIn 0.3s ease;
 }
 
-/* Fade in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Close button for expandable sections */
 .close-btn {
     background: #B22222;
     color: white;
@@ -539,44 +537,263 @@ footer {
     color: #cccccc;
 }
 
-/* ===== MEDIA QUERIES & BREAKPOINTS ===== */
-/* Mobile phones - stack everything vertically */
+/* ===== MEDIA QUERIES & BREAKPOINTS (3.1) ===== */
+
+/* Small devices (phones, 576px and down) */
 @media (max-width: 36em) {
-    /* Adjust header and logo layout */
-    /* Stack hero, story, and grids */
-    /* Reduce image sizes */
+    .header-container {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .logo-main {
+        font-size: 1.8rem;
+    }
+    
+    .logo-img {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .nav-menu a {
+        padding: 0.75rem;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .donate-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .story-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    /* Mobile image optimizations */
+    .hero-image img {
+        min-height: 15rem;
+    }
+    
+    .story-image img,
+    .program-image img {
+        min-height: 10rem;
+    }
+    
+    .team-member img {
+        max-width: 10rem;
+        height: 10rem;
+    }
 }
 
-/* Tablets */
+/* Medium devices (tablets, 577px to 768px) */
 @media (min-width: 36.0625em) and (max-width: 48em) {
-    /* Moderate adjustments for mid-sized screens */
+    .header-container {
+        padding: 0.75rem 1.5rem;
+        flex-wrap: wrap; /* Allow wrapping on tablets */
+        gap: 1rem;
+    }
+    
+    .logo {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .logo-main {
+        font-size: 2rem;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .nav-menu {
+        justify-content: center;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-menu a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+        min-width: auto;
+    }
+    
+    .donate-button {
+        order: 2;
+    }
+    
+    .hero {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .stories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Tablet image optimizations */
+    .hero-image img {
+        min-height: 16rem;
+    }
 }
 
-/* Desktops */
+/* Large devices (desktops, 769px and up) */
 @media (min-width: 48.0625em) {
-    /* Full-width layouts, larger fonts and images */
+    .header-container {
+        flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    }
+    
+    nav {
+        order: 0; /* Reset order */
+        width: auto;
+        margin-top: 0;
+    }
+    
+    .nav-menu {
+        flex-wrap: nowrap; /* Prevent menu wrapping */
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .stories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+    
+    /* Desktop image optimizations */
+    .hero-image img {
+        min-height: 20rem;
+    }
 }
 
-/* Extra large screens */
+/* Extra large devices (1200px and up) */
 @media (min-width: 75em) {
-    /* Expand containers and hero images for wide screens */
+    .container {
+        max-width: 75rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.8rem;
+    }
+    
+    /* Large screen image optimizations */
+    .hero-image img {
+        min-height: 25rem;
+    }
 }
 
 /* ===== ACCESSIBILITY ENHANCEMENTS ===== */
 @media (prefers-reduced-motion: reduce) {
-    /* Reduce all animations and transitions for motion-sensitive users */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 @media (prefers-contrast: high) {
-    /* Enhance borders and outlines for high contrast */
+    .btn-primary, .btn-secondary, .donate-button {
+        border: 0.125rem solid currentColor;
+    }
+    
+    .nav-menu a.active {
+        outline: 0.125rem solid #FFD700;
+    }
 }
 
-/* High-DPI support for sharp images */
+/* High-DPI screen support */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    /* Optimize image rendering for retina screens */
+    .hero-image img,
+    .story-image img,
+    .program-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
 }
 
-/* Print-friendly styles */
+/* Print styles */
 @media print {
-    /* Ensure images fit and avoid page breaks */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+    
+    .hero-image img,
+    .story-image img {
+        max-width: 80% !important;
+        margin: 1rem auto !important;
+    }
 }
