@@ -3,194 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiries - Shakti Foundation</title>
+    <title>Donate - Support Shakti Foundation</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section - Consistent navigation across all our pages -->
+    <!-- HEADER: Top section with logo, navigation, and donate button -->
     <header>
         <div class="header-container">
-            <!-- Logo area - Our organization's visual identity -->
+            <!-- Logo / Organization name -->
             <div class="logo">
                 <h1>Shakti Foundation</h1>
             </div>
             
-            <!-- Main navigation menu - Helps visitors find their way around our site -->
+            <!-- Navigation menu -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <!-- Current page is highlighted to show where the user is -->
-                    <li><a href="enquiry.html" class="active">Enquiry</a></li>
                 </ul>
             </nav>
             
-            <!-- Donate button - Always visible to encourage support for our mission -->
-            <a href="donate.html" class="donate-button">Donate Now</a>
+            <!-- Highlighted donate button (active because we're on this page) -->
+            <a href="donate.html" class="donate-button active">Donate Now</a>
         </div>
     </header>
 
     <main>
-        <!-- Enquiry Hero Section - Introduction to the enquiry process -->
-        <section class="enquiry-hero">
+        <!-- HERO SECTION: Banner encouraging donations -->
+        <section class="donate-hero">
             <div class="container">
-                <h2>Get Involved with Shakti Foundation</h2>
-                <!-- Encouraging message to invite engagement -->
-                <p>Interested in partnership, volunteering, or have specific questions? We'd love to hear from you.</p>
+                <h2>Support Women's Empowerment</h2>
+                <!-- Short explanation of how donations are used -->
+                <p>Your donation directly funds microfinance, healthcare, education, and skills training programs that transform lives and communities.</p>
             </div>
         </section>
 
-        <!-- Enquiry Form Section - Main content area for submitting inquiries -->
-        <section class="enquiry-form-section">
+        <!-- DONATION FORM SECTION -->
+        <section class="donation-main">
             <div class="container">
-                <h2>Send us an Enquiry</h2>
-                <p class="section-subtitle">Tell us how you'd like to be involved or what information you need</p>
+                <h2>Make a Donation!</h2>
+                <p class="section-subtitle">Your contribution helps us continue our mission of empowering communities</p>
                 
-                <!-- The actual enquiry form where visitors can reach out to us -->
-                <div class="enquiry-form">
+                <!-- Donation form starts here -->
+                <div class="donation-form">
                     <form action="#" method="POST">
-                        <!-- Personal Information section - Collects basic contact details -->
+                        
+                        <!-- Choose donation amount -->
+                        <div class="form-group">
+                            <label>Donation Amount</label>
+                            <!-- Pre-set quick amount buttons -->
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn">¥500</button>
+                                <button type="button" class="amount-btn">¥1,000</button>
+                                <button type="button" class="amount-btn">¥2,500</button>
+                            </div>
+                            <!-- Custom donation input -->
+                            <input type="number" name="custom-amount" placeholder="Custom Amount">
+                        </div>
+                        
+                        <!-- Choose donation frequency -->
+                        <div class="form-group">
+                            <label>Donation Frequency</label>
+                            <div class="frequency-buttons">
+                                <button type="button" class="frequency-btn">One-time</button>
+                                <button type="button" class="frequency-btn">Monthly</button>
+                                <button type="button" class="frequency-btn">Quarterly</button>
+                                <button type="button" class="frequency-btn">Annually</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Donor personal information -->
                         <div class="form-group">
                             <label>Your Information</label>
-                            <!-- Name and email in one row for efficient space usage -->
+                            <!-- Name and email side by side -->
                             <div class="form-row">
                                 <input type="text" name="full-name" placeholder="Full Name" required>
-                                <input type="email" name="email" placeholder="Email Address" required>
+                                <input type="email" name="donor-email" placeholder="Email Address" required>
                             </div>
-                            <!-- Phone and organization in a second row -->
+                        </div>
+                        
+                        <!-- Payment method selection -->
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div class="payment-methods">
+                                <!-- Credit/Debit card option (default) -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="card" checked>
+                                    Credit/Debit Card
+                                </label>
+                                <!-- Bank transfer option -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="bank">
+                                    Bank Transfer
+                                </label>
+                                <!-- UPI option -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="upi">
+                                    UPI
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Card details (shown only if Credit/Debit Card is selected) -->
+                        <div class="card-details" id="cardDetails">
+                            <!-- Card number and CVV -->
                             <div class="form-row">
-                                <input type="tel" name="phone" placeholder="Phone Number">
-                                <input type="text" name="organization" placeholder="Organization (if applicable)">
+                                <input type="text" name="card-number" placeholder="Card Number">
+                                <input type="text" name="cvv" placeholder="CVV">
+                            </div>
+                            <!-- Expiry date and name on card -->
+                            <div class="form-row">
+                                <input type="text" name="expiry-date" placeholder="MM/YY">
+                                <input type="text" name="card-name" placeholder="Name on Card">
                             </div>
                         </div>
                         
-                        <!-- Enquiry Type selection - Helps us categorize and route inquiries properly -->
-                        <div class="form-group">
-                            <label>Type of Enquiry</label>
-                            <!-- Button options for common enquiry types -->
-                            <div class="enquiry-type-buttons">
-                                <button type="button" class="enquiry-type-btn">Partnership</button>
-                                <button type="button" class="enquiry-type-btn">Volunteering</button>
-                                <button type="button" class="enquiry-type-btn">Program Information</button>
-                                <button type="button" class="enquiry-type-btn">Other</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Program Selection - Only relevant for program-related inquiries -->
-                        <div class="form-group" id="programSelection">
-                            <label>Which program are you interested in?</label>
-                            <!-- Dropdown menu of our various programs -->
-                            <select name="program-interest">
-                                <option value="">Select a program</option>
-                                <option value="microfinance">Microfinance</option>
-                                <option value="healthcare">Healthcare</option>
-                                <option value="education">Education</option>
-                                <option value="training">Skills Training</option>
-                                <option value="all">All Programs</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Message area - Where visitors can provide details about their inquiry -->
-                        <div class="form-group">
-                            <label>Your Message</label>
-                            <!-- Larger text area for detailed messages and questions -->
-                            <textarea name="message" placeholder="Please tell us more about your enquiry, questions, or how you'd like to get involved..." rows="6" required></textarea>
-                        </div>
-                        
-                        <!-- Preferred Contact Method - How the visitor would like us to respond -->
-                        <div class="form-group">
-                            <label>Preferred Contact Method</label>
-                            <div class="contact-methods">
-                                <!-- Email option - most common and preferred method -->
-                                <label class="contact-option">
-                                    <input type="radio" name="contact-method" value="email" checked>
-                                    Email
-                                </label>
-                                <!-- Phone call option - for more personal conversations -->
-                                <label class="contact-option">
-                                    <input type="radio" name="contact-method" value="phone">
-                                    Phone Call
-                                </label>
-                                <!-- WhatsApp option - popular for international communications -->
-                                <label class="contact-option">
-                                    <input type="radio" name="contact-method" value="whatsapp">
-                                    WhatsApp
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <!-- Submit button - Sends the enquiry to our team for response -->
-                        <button type="submit" class="btn-primary">Submit Enquiry</button>
+                        <!-- Final submit button -->
+                        <button type="submit" class="btn-primary confirm-donation-btn">Confirm Donation</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- Additional Information Section - Other ways people can engage with us -->
-        <section class="enquiry-info">
+        <!-- IMPACT SECTION: Shows how donations are used -->
+        <section class="impact-section">
             <div class="container">
-                <h2>Other Ways to Get Involved</h2>
-                
-                <!-- Cards showing different engagement opportunities -->
-                <div class="involvement-options">
-                    <!-- Corporate partnerships option -->
-                    <div class="option-card">
-                        <h3>Corporate Partnerships</h3>
-                        <p>We work with businesses to create meaningful CSR initiatives and sustainable partnerships that create real impact.</p>
-                        <!-- Link to learn more about corporate partnerships -->
-                        <a href="contact.html" class="btn-secondary">Learn More</a>
+                <h2>Your Donation Makes Impact</h2>
+                <!-- Specific examples of donation outcomes -->
+                <div class="impact-stats">
+                    <!-- Example for ¥500 -->
+                    <div class="impact-item">
+                        <h3>¥500</h3>
+                        <p>Provides a woman with microfinance training materials</p>
                     </div>
-                    
-                    <!-- Volunteer opportunities option -->
-                    <div class="option-card">
-                        <h3>Volunteer Opportunities</h3>
-                        <p>Join our team of dedicated volunteers in various capacities - from field work to administrative support.</p>
-                        <!-- Link to view available volunteer positions -->
-                        <a href="programs.html" class="btn-secondary">View Opportunities</a>
+                    <!-- Example for ¥1,000 -->
+                    <div class="impact-item">
+                        <h3>¥1,000</h3>
+                        <p>Funds healthcare supplies for a remote village clinic</p>
                     </div>
-                    
-                    <!-- Program visits option -->
-                    <div class="option-card">
-                        <h3>Program Visits</h3>
-                        <p>Interested in seeing our work firsthand? We organize site visits for potential partners and supporters.</p>
-                        <!-- Link to schedule a visit to our programs -->
-                        <a href="contact.html" class="btn-secondary">Schedule a Visit</a>
+                    <!-- Example for ¥2,500 -->
+                    <div class="impact-item">
+                        <h3>¥2,500</h3>
+                        <p>Sponsors a child's education for one full year</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick Contact Info - For those who prefer direct contact methods -->
-        <section class="quick-contact">
-            <div class="container">
-                <h2>Prefer to reach out directly?</h2>
-                <div class="contact-details">
-                    <!-- Specific email for partnership inquiries -->
-                    <p><strong>Email:</strong> partnerships@shakti.org.bd</p>
-                    <!-- Direct phone line to our partnerships team -->
-                    <p><strong>Phone:</strong> +91 98765 43210 (Partnerships Department)</p>
-                    <!-- Our office hours so people know when to expect responses -->
-                    <p><strong>Hours:</strong> Monday-Friday, 9AM-5PM</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer Section - Consistent across all pages with essential information -->
+    <!-- FOOTER: Bottom of the page -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Copyright information - Protects our organization's content -->
+                <!-- Copyright -->
                 <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
-                <!-- General contact information for various inquiries -->
+                <!-- Contact details -->
                 <p>Contact: info@shaktifoundation.org | +91 98765 43210 | +91 98765 43210</p>
             </div>
         </div>
     </footer>
 
-    <!-- External JavaScript file - Handles form interactions and dynamic elements -->
-    <script src="js/enquiry.js"></script>
+    <!-- JavaScript file for form behavior (interactivity) -->
+    <script src="js/donate.js"></script>
 </body>
 </html>
