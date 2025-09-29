@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page setup with character encoding and mobile-friendly design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Shakti Foundation</title>
+    <!-- External CSS file for styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section - Consistent across all pages for easy navigation -->
+    <!-- ================= HEADER SECTION ================= -->
+    <!-- Appears on top of every page for branding and navigation -->
     <header>
         <div class="header-container">
-            <!-- Logo section with image and text - our visual identity -->
+            
+            <!-- Logo Area: includes image and foundation name -->
             <div class="logo">
                 <img src="images/logo.png" alt="Shakti Foundation Logo" class="logo-img">
                 <div class="logo-text">
@@ -19,53 +23,55 @@
                 </div>
             </div>
             
-            <!-- Main Navigation Menu - Helps users find their way around our site -->
+            <!-- Navigation Menu: helps users move between pages -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="programs.html">Programs</a></li>
-                    <!-- Current page is highlighted with active class -->
+                    <!-- Highlighted link to show the user is on this page -->
                     <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="enquiry.html">Enquiry</a></li>
                 </ul>
             </nav>
             
-            <!-- Donate Button - Always visible to encourage support -->
+            <!-- Donate Button: always visible to encourage donations -->
             <a href="donate.html" class="donate-button">Donate Now</a>
         </div>
     </header>
 
     <main>
-        <!-- Contact Us Section - Primary way for visitors to reach out to us -->
+        <!-- ================= CONTACT SECTION ================= -->
+        <!-- Allows visitors to send a message or find contact info -->
         <section class="contact-section">
             <div class="container">
-                <!-- Section Heading - Clear title for this part of the page -->
+                <!-- Section Title -->
                 <h2>Contact Us</h2>
                 <p class="section-subtitle">Get in touch to learn more about our work or get involved</p>
                 
                 <div class="contact-content">
-                    <!-- Contact Form - Where visitors can send us messages directly -->
+                    <!-- Contact Form: visitors can send us their details -->
                     <div class="contact-form">
                         <form action="#" method="POST">
-                            <!-- Name and Email fields side by side for efficient use of space -->
+                            
+                            <!-- Name and Email fields shown side by side -->
                             <div class="form-row">
                                 <input type="text" name="name" placeholder="Your Name" required>
                                 <input type="email" name="email" placeholder="Your Email" required>
                             </div>
                             
-                            <!-- Subject field - helps us categorize and prioritize messages -->
+                            <!-- Subject field to understand message category -->
                             <input type="text" name="subject" placeholder="Subject" required>
                             
-                            <!-- Message area - where visitors can share details about their inquiry -->
+                            <!-- Text area for visitor’s detailed message -->
                             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                             
-                            <!-- Submit Button - sends the form data to our team -->
+                            <!-- Submit button sends the form -->
                             <button type="submit" class="btn-primary">Send Message</button>
                         </form>
                     </div>
                     
-                    <!-- Contact Information - Alternative ways to reach us -->
+                    <!-- Contact Info Section: alternative ways to reach us -->
                     <div class="contact-info">
                         <h3>Contact Information</h3>
                         <p>📧 info@shaktifoundation.org</p>
@@ -73,7 +79,7 @@
                         <p>📱 +91 98765 43210</p>
                         
                         <h3>Our Location</h3>
-                        <!-- Interactive Google Map - Shows visitors exactly where we're located -->
+                        <!-- Embedded Google Map showing our office location -->
                         <div class="map-container">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977741619!2d90.349285767855!3d23.780887714264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1690832612345!5m2!1sen!2sus" 
@@ -91,7 +97,8 @@
             </div>
         </section>
 
-        <!-- Make a Donation Section - For visitors who want to support our work financially -->
+        <!-- ================= DONATION SECTION ================= -->
+        <!-- Allows visitors to support the foundation financially -->
         <section class="donation-section">
             <div class="container">
                 <h2>Make a Donation</h2>
@@ -99,7 +106,8 @@
                 
                 <div class="donation-form">
                     <form action="#" method="POST">
-                        <!-- Donation Amount Selection - Pre-set options for convenience -->
+                        
+                        <!-- Predefined donation amounts with buttons -->
                         <div class="form-group">
                             <label>Donation Amount</label>
                             <div class="amount-buttons">
@@ -107,11 +115,11 @@
                                 <button type="button" class="amount-btn">¥1,000</button>
                                 <button type="button" class="amount-btn">¥2,500</button>
                             </div>
-                            <!-- Custom amount field for those who want to give a specific amount -->
+                            <!-- Custom donation amount field -->
                             <input type="number" name="custom-amount" placeholder="Custom Amount">
                         </div>
                         
-                        <!-- Donation Frequency - Options for one-time or recurring donations -->
+                        <!-- Frequency of donation (one-time, monthly, etc.) -->
                         <div class="form-group">
                             <label>Donation Frequency</label>
                             <div class="frequency-buttons">
@@ -122,7 +130,7 @@
                             </div>
                         </div>
                         
-                        <!-- Donor Information - Collecting basic details about our supporters -->
+                        <!-- Donor basic details -->
                         <div class="form-group">
                             <label>Your Information</label>
                             <div class="form-row">
@@ -131,7 +139,7 @@
                             </div>
                         </div>
                         
-                        <!-- Payment Method Selection - Different ways to make a donation -->
+                        <!-- Payment methods available -->
                         <div class="form-group">
                             <label>Payment Method</label>
                             <div class="payment-methods">
@@ -150,7 +158,7 @@
                             </div>
                         </div>
                         
-                        <!-- Card Details - Only shown when card payment is selected -->
+                        <!-- Card details (only shown if "Card" option is selected) -->
                         <div class="card-details" id="cardDetails">
                             <div class="form-row">
                                 <input type="text" name="card-number" placeholder="Card Number">
@@ -162,14 +170,15 @@
                             </div>
                         </div>
                         
-                        <!-- Submit Donation Button - Final step to complete the donation process -->
+                        <!-- Final button to confirm donation -->
                         <button type="submit" class="btn-primary confirm-donation-btn">Confirm Donation</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- Quick Contact Info Section - For those who prefer direct contact methods -->
+        <!-- ================= QUICK CONTACT INFO ================= -->
+        <!-- Provides direct contact details for visitors -->
         <section class="quick-contact">
             <div class="container">
                 <h2>Prefer to Reach Us Directly?</h2>
@@ -183,54 +192,53 @@
         </section>
     </main>
 
-    <!-- Footer Section - Consistent across all pages with essential information -->
+    <!-- ================= FOOTER SECTION ================= -->
+    <!-- Shown on every page with legal + contact details -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <!-- Copyright Information - Protecting our organization's intellectual property -->
+                <!-- Legal info -->
                 <p>&copy; 2025 Shakti Foundation. All rights reserved.</p>
                 
-                <!-- Contact Details in Footer - Easy access to our contact information -->
+                <!-- Quick contact info -->
                 <p>📧 info@shaktifoundation.org | 📞 +91 98765 43210 | 📱 +91 98765 43210</p>
                 
-                <!-- Physical Address - Where visitors can find our office -->
+                <!-- Office address -->
                 <p>📍 123 Empowerment Street, Dhaka, Bangladesh</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for interactive elements - Enhances user experience -->
+    <!-- ================= JAVASCRIPT ================= -->
+    <!-- Adds interactivity to buttons and payment options -->
     <script>
-        // Handles donation amount button interactions
-        // Makes it easy for donors to select common donation amounts
+        // Handle donation amount selection
         document.querySelectorAll('.amount-btn').forEach(button => {
             button.addEventListener('click', function() {
-                // Remove active class from all buttons to reset the selection
+                // Remove highlight from all amount buttons
                 document.querySelectorAll('.amount-btn').forEach(btn => {
                     btn.classList.remove('active');
                 });
-                // Add active class to clicked button to show it's selected
+                // Highlight the button that was clicked
                 this.classList.add('active');
-                // Update custom amount field with the selected amount
+                // Auto-fill the custom amount input with selected value
                 document.querySelector('input[name="custom-amount"]').value = this.textContent.replace('¥', '');
             });
         });
 
-        // Handles donation frequency button interactions
-        // Allows donors to choose how often they want to contribute
+        // Handle donation frequency selection
         document.querySelectorAll('.frequency-btn').forEach(button => {
             button.addEventListener('click', function() {
-                // Remove active class from all frequency buttons
+                // Remove highlight from all frequency buttons
                 document.querySelectorAll('.frequency-btn').forEach(btn => {
                     btn.classList.remove('active');
                 });
-                // Add active class to the selected frequency option
+                // Highlight the clicked button
                 this.classList.add('active');
             });
         });
 
-        // Shows or hides card details based on selected payment method
-        // Only shows card fields when card payment is chosen
+        // Show card details only if "Card" is selected
         document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 const cardDetails = document.getElementById('cardDetails');
