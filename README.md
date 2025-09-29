@@ -1,11 +1,13 @@
 ## Shakti Foundation Website
-A responsive website for Shakti Foundation, an organization dedicated to women's empowerment through microfinance, healthcare, education, and skills training programs in Bangladesh.
+A responsive website for Shakti Foundation, an organization dedicated to women's empowerment through microfinance, healthcare, education, and skills training programs in Bangladesh. 
+
+## Feedback was recieved and implemented to add more descriptive comments.
 
 ## Project Overview
 The Shakti Foundation website consists of six main pages designed to promote women's empowerment and facilitate donations through an intuitive, accessible interface.
 
 ## Website Structure
-Homepage (index.html) - Landing page featuring hero section, success stories, and calls-to-action with advanced hover animations and responsive design.
+Homepage (index.html) - Landing page featuring hero section, success stories, and calls-to-action with advanced hover animations and responsive design. 
 
 About Us (about.html) - Organization history (founded 1992 by Dr. Humaira Islam), vision, mission, and leadership team with expandable biography sections.
 
