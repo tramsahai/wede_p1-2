@@ -53,15 +53,16 @@ The website is designed to adapt seamlessly to different devices, ensuring a con
   - Simplified navigation menu with larger touch targets  
   - Adjusted typography for medium-sized screens  
   - Interactive elements optimized for both touch and click
-  - 
-    ![image alt](https://github.com/tramsahai/wede_p1-2/blob/756b34938931e3f8fc410f50187133af5af5003f/Screenshot%202025-09-29%20210929.png) 
+   ![image alt](https://github.com/tramsahai/wede_p1-2/blob/1602673df3e26cab59c4d6ccd55de1903a9664bd/Screenshot%202025-09-29%20213341.png)  
 
 - **Mobile Phones:**  
   - Single-column stacked layout for vertical scrolling  
   - Collapsible navigation menu (hamburger style)  
   - Optimized image scaling for small screens  
   - Larger buttons and form inputs for touch interactions  
-  - Minimalist view of animations for performance efficiency  
+  - Minimalist view of animations for performance efficiency
+  ![image alt](https://github.com/tramsahai/wede_p1-2/blob/756b34938931e3f8fc410f50187133af5af5003f/Screenshot%202025-09-29%20210929.png) 
+    
 
 ---
 
